@@ -1,10 +1,14 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+    background-color: #f5f5f5; 
 }
 .header{
-    background-color: #f1f2f3;
+    background-color: white;
+    height: 120px;
     font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+    border-bottom: 5px solid #22a7ee;
 }
 
 .header__nav{
@@ -195,4 +199,46 @@ body{
 }
 .nav_btns_submenu li{
     border-right: none;
+}
+.othergoals_date{
+    padding: 15px;
+}
+.othergoals_date button{
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+}
+.date_leftArrow, .date_rightArrow, .calender_symbol{
+    line-height: 900;
+    width: 17px;
+    height: 32px;
+    padding: 0;
+    background-size: 108%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
+    background-color: transparent;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+}
+.date_rightArrow{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
+    background-size: 100%;
+}
+.date_show{
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    margin: 0 1em;
+    max-width: 22em;
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.calender_symbol{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
+    width: 32px;
+    background-size: 100%;
+    margin-right: 0.8em;
 }

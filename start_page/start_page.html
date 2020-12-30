@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <!------------------------------------------- header ------------------------------------------------------------>
-    <div class="header">
+     <!------------------------------------------- header ------------------------------------------------------------>
+     <div class="header">
         <div class="header__nav">
             <div class="header__nav__logo">
                 <a href="#" class="header_nav_a">
@@ -97,7 +97,7 @@
                 <div class="header__social__search" id="header__social__search">
 
                     <!-- <button id="header__social__search_btn" class="header__social__search_btn"> -->
-                    <i class="fas fa-search"></i>
+                    
                     </button>
                 </div>
             </div>
@@ -727,7 +727,7 @@
         let watercheckbox = document.getElementById("watercheckbox")
         let planbox= document.getElementById("planbox")
         let a =  localStorage.getItem("count")  
-        if(a>5)
+        if(a>8)
         {
             planbox.style.visibility="visible"
             watercheckbox.style.visibility = "visible"
@@ -750,12 +750,12 @@
         let watercheckbox = document.getElementById("watercheckbox")
         let planbox= document.getElementById("planbox")
         let a =  localStorage.getItem("count")  
-        if(a>5)
+        if(a>8)
         {
             watercheckbox.style.visibility = "visible"
             planbox.style.visibility="visible"
         }
-        if(a<5)
+        if(a<8)
         {
             watercheckbox.style.visibility = "hidden"
             planbox.style.visibility="hidden"

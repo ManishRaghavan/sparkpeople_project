@@ -135,16 +135,16 @@
             <div class="searchbox" id="1" onclick="color()">
                 <h2 style="text-align: center;margin-top: 10px;">Search</h2>
             </div>
-            <div class="searchbox" id="2" >
-                <h2 style="text-align: center;margin-top: 10px;">Recent</h2>
+            <div class="searchbox" >
+                <h2 id="2"  style="text-align: center;margin-top: 10px;">Recent</h2>
             </div>
-            <div class="searchbox" id="3" onclick="color3()">
+            <div class="searchbox" id="3" >
                 <h2 style="text-align: center;margin-top: 10px;">Favorites</h2>
             </div>
-            <div class="searchbox" id="4" onclick="color4()">
+            <div class="searchbox" id="4" >
                 <h2 style="text-align: center;margin-top: 10px;">Groupings</h2>
             </div>
-            <div class="searchbox" id="5" onclick="color5()">
+            <div class="searchbox" id="5" >
                 <h2 style="text-align: center;margin-top: 10px;">Recepies</h2>
             </div>
         </div>
@@ -525,7 +525,6 @@
 
         document.getElementById("search").addEventListener("click", view)
         document.getElementById("close").addEventListener("click", close)
-        document.getElementById("2").addEventListener("click",recent)
 
         
 
@@ -578,7 +577,13 @@
                 }
             }
 
+            // document.getElementById("2").addEventListener("click",recent)
 
+            // function recent()
+            // {
+            //     console.log("aaa")
+            //     alert("Recent search is Egg")
+            // }
         }
     </script>
 
