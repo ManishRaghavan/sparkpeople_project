@@ -1,0 +1,464 @@
+.header {
+    height: 80px;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header > img {
+    margin-left: 10px;
+}
+.home_logo {
+    display: flex;
+    flex-direction: column;
+}
+.tag_line {
+    margin-left: 180px;
+    font-style: italic;
+    color: gray
+}
+.login_button {
+    height: 40px;
+    width: 80px;
+    background-color: rgb(48, 114, 236);
+    border: 1px solid rgb(48, 114, 236);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.bkgrnd_img {
+    background-image: url(https://www.sparkpeople.com/assets/newprofile/in15_top_bg1.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+.signup_button {
+    height: 50px;
+    width: 250px;
+    background-color: rgb(48, 114, 236);
+    color: white;
+    border:1px solid rgb(48, 114, 236);
+    border-radius: 10px;
+    margin-left: 250px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.bkgrnd_img > h1 {
+    font-size: 40px;
+    padding-top: 20px;
+    margin-left: 250px;
+    margin-top: 0px;
+    color: white;
+}
+.div2_text2 {
+    font-size: 30px;
+    margin-left: 250px;
+    color: white;
+}
+.t_c {
+    margin-top: 20px;
+    margin-left: 250px;
+    color: white;
+    font-size: 12px;
+}
+.a_member {
+    margin-top: 0px;
+    margin-left: 250px;
+    background-color: rgb(83, 82, 82);
+    border: 1px solid rgb(83, 82, 82);
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-weight: bold;
+    font-size:15px;
+}
+.bestdiet_img {
+    height: 150px;
+    width: 100px;
+    margin-right: 450px;
+    /* margin-bottom: 30px; */
+    margin-top: 0px
+}
+.member {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.div_3 {
+    height: 460px;
+    width: 100%;
+    background-color: rgb(226, 223, 223);
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.div_3 >h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(22, 22, 22);
+}
+.div3_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 180px;
+    margin-right: 80px;
+    /* margin-top: 20px; */
+    width: 1000px;
+}
+.four_icons {
+    height: 250px;
+    width: 200px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.four_icons > img {
+    height: 104px;
+    width: 104px;
+    transition: 1s
+}
+.four_icons > img:hover {
+    transform: scale(1.2);
+}
+.four_icons > p {
+    font-size: 18px;
+    color: rgb(48, 47, 47);
+}
+.four_icons > p:hover {
+    color: blue;
+}
+.register_button {
+    height: 60px;
+    width: 220px;
+    background-color: rgb(248, 134, 3);
+    border: 1px solid orange;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.register_button:hover {
+    background-color: orange;
+}
+.div_4 {
+    height: 400px;
+    width: 100%;
+    /* background-color: gray; */
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.advice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.advice_image {
+    height: 320px;
+    width: 320px;
+    /* border: 1px solid black; */
+}
+.advice_image > img {
+    height: 250px;
+    width: 350px;
+}
+.advice_image > p {
+    font-size: 18px;
+    color: blue;
+    padding-left: 20px;
+}
+.div_5 {
+    height: 250px;
+    /* background-color: gray;
+    border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.workout {
+    height: 250px;
+    width: 380px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.workout_img >img {
+    height: 200px;
+    width: 180px;
+}
+.div_6 {
+    height: 250px;
+    width: 100%;
+    /* background-color: peachpuff;
+    border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.div6_first {
+    height: 250px;
+    width: 400px;
+    /* border: 1px solid red; */
+}
+.div6_first > p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.div6_ques > ul {
+    font-size: 17px;
+    list-style: none;
+    text-decoration: underline;
+    line-height: 0.7cm;
+}
+.div6_ques > ul:hover {
+    color: blue;
+}
+.div_7 {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(236, 233, 233);
+    /* border: 1px spolid black; */
+    text-align: center;
+}
+.div_7 > h1 {
+    padding-top: 20px;
+    color: rgb(51, 51, 51);
+}
+.div7_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.div7_img {
+    height: 320px;
+    width: 380px;
+    /* border: 1px solid black; */
+}
+.div7_img > img {
+    height: 250px;
+    width: 380px;
+}
+.div7_img > p {
+    color: blue;
+    font-size: 18px;
+}
+.div_8 {
+    height: 550px;
+    width: 100%;
+    /* background-color: peachpuff;
+    border: 1px solid black; */
+}
+.div_8 > p {
+    font-size: 40px;
+    text-align: center;
+    color:rgb(22, 22, 22);
+    padding-top: 0px;
+    margin-top: 10px;
+}
+.div8_img {
+    height: 430px;
+    width: 820px;
+    /* background-color: rgb(236, 233, 233);
+    border: 1px solid black; */
+    margin-left: 250px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.div8_img > img {
+    height: 430px;
+    width: 550px;
+}
+.div8_text {
+    width: 250px;
+    margin-left: 20px;
+}
+.div8_text > p {
+    font-size: 17px;
+    padding-top: 80px;
+}
+.div8_button {
+    height: 80px;
+    width: 200px;
+    background-color: rgb(48, 114, 236);
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+    border: 1px solid rgb(48, 114, 236);
+    border-radius: 5px;
+}
+.div8_button:hover {
+    background-color:rgb(84, 138, 240);
+}
+.div_9 {
+    height: 450px;
+    width: 100%;
+    /* background-color: peachpuff;
+    border: 1px solid green; */
+}
+.div_9 > p {
+    font-size: 40px;
+    text-align: center;
+    color:rgb(22, 22, 22);
+    padding-top: 0px;
+    margin-top: 10px;
+}
+.div9_img {
+    height: 350px;
+    width: 230px;
+    margin-left:200px;
+    /* background-color: powderblue;
+    border: 1px solid black; */
+}
+.div9_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.div9_img > img {
+    height: 150px;
+    width: 230px;
+}
+.div9_img > p {
+    text-align: center;
+
+}
+.div9_img2 {
+    height: 350px;
+    width: 230px;
+    /* background-color: powderblue;
+    border: 1px solid black; */
+}
+.div9_img2 > img {
+    height: 220px;
+    width: 230px;
+}
+.div9_img2 > p {
+    text-align: center;
+
+}
+.div9_img3 {
+    height: 350px;
+    width: 230px;
+    margin-right: 200px;
+    /* background-color: powderblue;
+    border: 1px solid black; */
+}
+.div9_img3 > img {
+    height: 130px;
+    width: 230px;
+}
+.div9_img3 > p {
+    text-align: center;
+}
+.div_10 {
+    text-align: center;
+}
+.div_11 {
+    height: 480px;
+    width: 100%;
+    background-image: url(https://sparkpeo.hs.llnwd.net/e1/resize/1600w/assets/newprofile/in15_step_bg1.jpg);
+}
+.div_11 > p {
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.last_button {
+    height: 120px;
+    width: 120px;
+    background-color: rgb(48, 114, 236);
+    border-radius: 60px;
+    border: 1px solid rgb(48, 114, 236);
+    margin-left: 52%;
+    margin-top: 50px;
+}
+.last_button:hover {
+    transform: scale(1.5);
+}
+.join_now {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+.for_free {
+    font-size: 15px;
+    color: white;
+    padding-top: 0px;
+}
+.div_12 {
+    height: 250px;
+    width: 100%;
+    background-color: rgb(224, 220, 220);
+    /* border: 1px solid black; */
+    /* margin-top: 30px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.div12_imgs {
+    height: 250px;
+    width: 500px;
+    /* border: 1px solid green; */
+    margin-left: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.div12_box {
+    height: 250px;
+    width: 200px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.div12_box > img {
+    height: 150px;
+    width: 200px;
+}
+.div12_box > p {
+    color: blue;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.div12_follow {
+    height: 250px;
+    width: 200px;
+    /* border: 1px solid purple; */
+    margin-right: 200px;
+    text-align: center;
+}
+.div12_follow > p {
+    font-size: 18px;
+    padding-top: 20px;
+}
+.div12_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.icon_button {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+.icon_button:hover {
+    border: 1px solid rgb(145, 143, 143);
+    transform: scale(1.2);
+}
