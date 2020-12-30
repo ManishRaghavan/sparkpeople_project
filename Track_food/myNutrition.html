@@ -173,9 +173,20 @@
                     <p style="margin:0;margin-left: 5px; padding-top:5px;">You have not entered anything <strong>OOPs!</strong></p>
                 </div>
             </div>
+            <div class="search2" id="addfood">
+                <h3>Add a food +</h3>
+            </div>
+
+            <select name="food" id="food">
+                <option value="breakfast" id="breakfast">Breakfast</option>
+                <option value="lunch" id="lunch">Lunch</option>
+                <option value="dinner" id="dinner">Dinner</option>
+                <option value="snacks" id="snacks">Snacks</option>
+              </select>
+
         </div>
 
-        <table>
+        <table >
             <tr style="height:40px;background-color: #E8E8E8;">
                 <th></th>
                 <th></th>
@@ -207,19 +218,19 @@
                     <h3>Add a food +</h3>
                 </div></td>
             </tr>
-            <tr style="height:40px;border-bottom:0.5px solid gray ">
-                <td style="font-size:15px;" >None</td>
-                <td></td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr  style="height:40px;border-bottom:0.5px solid gray ">
+                <td id="_breakfast" style="font-size:15px;" >None</td>
                 <td></td>
                 <td></td>
-                <td ></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="_breakfast1"></td>
+                <td id="_breakfast2"></td>
+                <td id="_breakfast3"></td>
+                <td id="_breakfast4"></td>
+                <td id="_breakfast5"></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
                 <td style="font-size:15px;"><strong>Breakfast Total:</strong></td>
@@ -254,18 +265,18 @@
                 </div></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray ">
-                <td style="font-size:15px;" >None</td>
+                <td  id="_lunch" style="font-size:15px;" >None</td>
                 <td></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td> </td>
-                <td> </td>
-                <td></td>
-                <td></td>
-                <td ></td>
+                <td id="_lunch1"></td>
+                <td id="_lunch2"></td>
+                <td id="_lunch3"></td>
+                <td id="_lunch4"></td>
+                <td id="_lunch5"></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
                 <td style="font-size:15px;"><strong>Lunch Total:</strong></td>
@@ -301,18 +312,18 @@
                 </div></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray ">
-                <td style="font-size:15px;" >None</td>
+                <td id="_dinner" style="font-size:15px;" >None</td>
                 <td></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td> </td>
-                <td> </td>
-                <td></td>
-                <td></td>
-                <td ></td>
+                <td id="_dinner1"></td>
+                <td id="_dinner2"></td>
+                <td id="_dinner3"></td>
+                <td id="_dinner4"></td>
+                <td id="_dinner5"></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
                 <td style="font-size:15px;"><strong>Dinner Total:</strong></td>
@@ -349,18 +360,18 @@
                 </div></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray ">
-                <td style="font-size:15px;" >None</td>
+                <td id="_snacks"style="font-size:15px;" >None</td>
                 <td></td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td> </td>
-                <td> </td>
-                <td></td>
-                <td></td>
-                <td ></td>
+                <td id="_snacks1"></td>
+                <td id="_snacks2"></td>
+                <td id="_snacks3"></td>
+                <td id="_snacks4"></td>
+                <td id="_snacks5"></td>
             </tr>
             <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
                 <td style="font-size:15px;"><strong>Snacks Total:</strong></td>
@@ -505,6 +516,18 @@
                 <td>0</td>
                 
               </tr>
+              <tr>
+                <td>Fiber</td>
+                <td style="color: red;" >	25 - 35g</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                
+              </tr>
            
           </table>
           
@@ -547,9 +570,11 @@
             let html = ""
 
             if (input == search_data[0]) {
+                let id = 0
                 for (i in data[0].egg) {
+                    id++
                     html += ` 
-                    <div class="googlebox">
+                    <div class="googlebox" id="a${id}">
                         <p style="margin:0;margin-left: 5px; padding-top:5px;">${data[0].egg[i]}</p>
                     </div>`
                     document.getElementById("googlebox").innerHTML = html
@@ -568,23 +593,60 @@
             }
 
             if (input == search_data[2]) {
+                
                 for (i in data[2].carrot) {
                     html += ` 
-                    <div class="googlebox">
+                    <div class="googlebox1" >
                         <p style="margin:0;margin-left: 5px; padding-top:5px;">${data[2].carrot[i]}</p>
                     </div>`
                     document.getElementById("googlebox").innerHTML = html
                 }
             }
-
-            // document.getElementById("2").addEventListener("click",recent)
-
-            // function recent()
-            // {
-            //     console.log("aaa")
-            //     alert("Recent search is Egg")
-            // }
         }
+
+        document.getElementById("addfood").addEventListener("click",add)
+
+function add()
+{ 
+    let input = document.getElementById("input").value
+    let val =document.getElementById("food").value
+    if(val == "breakfast")
+    {
+        document.getElementById("_breakfast").textContent = input
+    document.getElementById("_breakfast1").textContent = 72
+    document.getElementById("_breakfast2").textContent = 33
+    document.getElementById("_breakfast3").textContent = 55
+    document.getElementById("_breakfast4").textContent =33
+    document.getElementById("_breakfast5").textContent = 120
+    }
+    if(val == "lunch")
+    {
+        document.getElementById("_lunch").textContent = input
+    document.getElementById("_lunch1").textContent = 172
+    document.getElementById("_lunch2").textContent = 53
+    document.getElementById("_lunch3").textContent = 70
+    document.getElementById("_lunch4").textContent =33
+    document.getElementById("_lunch5").textContent = 20
+    }
+    if(val == "dinner")
+    {
+        document.getElementById("_dinner").textContent = input
+    document.getElementById("_dinner1").textContent = 172
+    document.getElementById("_dinner2").textContent = 53
+    document.getElementById("_dinner3").textContent = 70
+    document.getElementById("_dinner4").textContent =33
+    document.getElementById("_dinner5").textContent = 20
+    }
+    if(val == "snacks")
+    {
+        document.getElementById("_snacks").textContent = input
+    document.getElementById("_snacks1").textContent = 172
+    document.getElementById("_snacks2").textContent = 53
+    document.getElementById("_snacks3").textContent = 70
+    document.getElementById("_snacks4").textContent =33
+    document.getElementById("_snacks5").textContent = 20
+    }
+}
     </script>
 
     <script type="text/javascript" src="data.js">
