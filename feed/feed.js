@@ -72,14 +72,7 @@
             <h id="comment" >Comment</h>
         </div>
     </div>
-    <div class="commentsec_box">
-        <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
-        <p>
-            <h style="color: #2B71BD;">REDROBIN47</h> Looking forward to it. <h style="color: #cccccc;">18
-                seconds ago</h>
-        </p>
-    </div>
-</div>`
+    `
     document.getElementById("mainbox").innerHTML = html 
   }
   let countlike = 0
@@ -110,7 +103,7 @@
     document.getElementById("commentinput").style.display="none"
     let html2 = `<img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
     <p>
-        <h style="color: #2B71BD;">manish13</h>${commenttext} <h style="color: #cccccc;margin-left:20px">1
+        <h style="color: #2B71BD;">manish13</h>${commenttext} <h style="color: #cccccc;">1
             seconds ago</h>
     </p>`
     document.getElementById("commentsec_box").innerHTML += html2
