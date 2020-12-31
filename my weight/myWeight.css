@@ -1,0 +1,425 @@
+
+.myweights{
+    background-color: #f4f5f7;
+    width: 1000px;
+    position: relative;
+    font-family: arial, verdana, sans-serif;
+    box-sizing: border-box;
+    margin: auto;
+    /* display: none; */
+}
+.myweight{
+    padding: 10px 15px 15px 15px;
+}
+.myweight_header{
+    margin: 0px 0px 10px 8px;
+}
+.myweight_header h1 {
+    margin: 0;
+    padding: 0;
+    color: #3f3f3f;
+    font-size: 35px;
+    line-height: normal;
+}
+#small{
+    font-size: 20px;
+    color: #666;
+}
+.weightloss_Box{
+}
+.weightloss_home{
+    margin-left: .5em;
+    border-radius: .3em;
+    background-color: white;
+    padding: 5px 12px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.home_header h1, #weight_diff{
+    margin: 5px 0px;
+    font-size: 22px;
+}
+.home_header p, .home_header span{
+    font-size: 13px;
+    margin: 5px 0px;
+    display: inline-block;
+}
+.home_header button{
+    color: white;
+    background-color: #1095dc;
+    border: 1px solid #1095dc;
+    padding: 5px;
+    border-radius: 2px;
+}
+.home_header button:hover{
+    opacity: 0.9;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.home_header button:active,
+.home_header button:focus{
+    outline: none;
+}
+.othergoals_date{
+    padding: 15px;
+}
+.othergoals_date button{
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+}
+.date_leftArrow, .date_rightArrow, .calender_symbol{
+    line-height: 900;
+    width: 17px;
+    height: 32px;
+    padding: 0;
+    background-size: 108%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
+    background-color: transparent;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+}
+.date_rightArrow{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
+    background-size: 100%;
+}
+.date_show{
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    margin: 0 1em;
+    max-width: 22em;
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.calender_symbol{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
+    width: 32px;
+    background-size: 100%;
+    margin-right: 0.8em;
+}
+.myweight_tracker_top{
+    background-color: white;
+    border: 1px solid #b6bbe6;
+    box-shadow: 0px 0px 6px #ccc;
+    width: 650px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;   
+    padding: 10px;
+    margin: 0px 15px 0px 8px;
+
+}
+.myweight_tracker_top button,
+.myweight_tracker_bottom button{
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+}
+.myweight_tracker_top_green{
+    background-color: #009f9f;
+    border: 1px solid #009f9f;
+}
+.myweight_tracker_top_blue{
+    background-color: #1095dc;
+    border: 1px solid #1095dc;
+}
+.myweight_tracker_top button:hover{
+    opacity: 0.9;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.tracker_head, 
+.tracker_head2, 
+.weights_data, 
+.myweight_footer, 
+.wellness_data{
+    display: flex;
+}
+.myweight_tracker{
+    width: 950px;
+    border: 1px solid #b6bbe6;
+    box-shadow: 0px  0px 6px #ccc;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin: 0px 15px 10px 8px;
+}
+.tracker_head{
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    background-color: #e8e8e8;
+}
+.head1{
+    padding: 12px 22px;
+
+}
+.head2{
+    background-color: #d6d6d6;
+    padding: 12px 52px;
+}
+.tracker_head2{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5fe;
+    border: 1px solid #d7d7f9;
+    padding: 8px;
+}
+.head2_subhead{
+    font-weight: bold;
+    font-size: 22px;
+}
+.head2_buttons button{
+    color: #0080c4;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+.weights_data, .wellness_data{
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+.weights_data_head div, 
+.weights_data_Lentry div, 
+.weights_data_Recommend div,
+.weights_data_head div {
+    background-color: white;
+    padding: 3px 30px 3px 30px;
+}
+.weights_data_Lentry div{
+    width: 120px;
+    /* padding: 0px 20px; */
+}
+.weights_data_Recommend div{
+    width: 120px;
+}
+.wellness_data_value{
+    display: flex !important;
+    flex-direction: column;
+}
+.wellness_data_head div{
+    background-color: white;
+    padding: 1px 70px;
+    align-items: center;
+}
+.wellness_data_Lentry div{
+    width: 140px;
+    background-color: white;
+}
+.wellness_data_recommend div{
+    padding: 1px 70px;
+    background-color: white;
+}
+.myweight_tracker_bottom{
+    padding: 10px;
+}
+.myweight_footer_reports,
+.myweight_footer_tools,
+.myweight_footer_devices{
+    background-color: #fff;
+    border: 1px solid #d7d7f9;
+    box-shadow: 0px 0px 5px #efefef;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 290px;
+    margin-right: 25px;
+}
+.reports_header,
+.tools_header,
+.devices_header{
+    display: flex;
+    padding: 5px;
+    /* margin: 5px; */
+}
+.reports_header h1,
+.tools_header h1,
+.devices_header h1{
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 22px;
+}
+.reports1,
+.tools1,
+.devices1{
+    background: linear-gradient(to bottom,  #ffffff 0%,#f4fbff 49%,#edf8ff 52%,#e8f6ff 100%);
+    padding: 8px 12px;
+    border-bottom: 1px solid #ffffff;
+    font-size: 15px;
+    color: #007fc4;
+}
+/* .fitness_addons{
+    display: none;
+} */
+.pushups{
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding: 1px 80px 1px 40px; */
+    /* background-color: white; */
+    box-sizing: border-box;
+    
+}
+.pushups_content{
+    background-color: white;
+    padding: 0px 80px;
+    border: 3px solid white;
+}
+.pushups_input{
+    /* padding: 0px 30px; */
+    margin: 0px 60px 0px 60px;
+}
+.pushups_data{
+    background-color: white;
+    width: 150px;
+    padding-left: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+}
+.recommend{
+    padding-left: 60px;
+    padding-right: 50px;
+    background-color: white;
+    margin-left: 70px;
+}
+.step{
+    display: flex;
+}
+.step_content{
+    background-color: white;
+    padding: 0px 50px;
+    margin-right: 5px;
+}
+.step_input{
+    margin: 0px 50px;
+}
+/* Pop up Css */
+
+/* BMI Pop up */
+.bmiModel{
+    background-color: #fff;
+    display: none;
+    z-index: 100000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    transition: display, 1s;
+    /* margin: auto; */
+}
+.bmi_header h2{
+    margin: 0;
+}
+.bmiModal-content{
+    width: 600px;
+    height: 680px;
+    background-color: white;
+    margin: auto;
+    padding: 30px 60px;
+}
+
+.bmi_inputs, 
+.bmi_ranges, 
+.weights, 
+.fit_inputs,
+.health_inputs{
+    background-color: #efefef;
+    /* padding: 10px; */
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 0px 6px #efefef;
+    margin-bottom: 5px;
+}
+.inputs_header, .range_header, .weights_header{
+    background-color: #e9f8f8;
+    padding: 3px 0px 3px 5px;
+    /* font-size: 16px; */
+}
+.inputs_header h2, .range_header h2, .weights_header h2{
+    color: #01a0a0;
+}
+.inputs_info{
+    padding: 10px;
+}
+.inputs_info input{
+    padding: 5px;
+    font-size: 16px;
+}
+.inputs_info button, .bmi_save{
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff7b08;
+    border: 1px solid #ff7b08;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.inputs_info button:focus,
+.inputs_info button:active,
+.bmi_save:focus,
+.bmi_save:active{
+    outline: none;
+}
+.bmi_you{
+    margin: auto;
+    /* text-align: center; */
+    margin: 10px;
+    margin-left: 250px;
+}
+.bmi_img{
+    display: block;
+}
+.weights_input{
+    text-align: center;
+}
+.weights_input input{
+    font-size: 16px;
+}
+.bmi_save{
+    margin-bottom: 10px;
+}
+
+.Fitness_model{
+    background-color: #fff;
+    display: none;
+    z-index: 100000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    transition: display, 1s;
+    /* margin: auto; */
+}
+
+.fitness_content{
+    width: 750px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 30px 60px;
+}
