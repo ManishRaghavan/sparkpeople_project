@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="start_page.css">
+    <link rel="stylesheet" href="spinwheel.css">
     <title>sparkpeople.com</title>
 </head>
 
 <body>
-     <!------------------------------------------- header ------------------------------------------------------------>
-     <div class="header">
+    <!------------------------------------------- header ------------------------------------------------------------>
+    <div class="header">
         <div class="header__nav">
             <div class="header__nav__logo">
                 <a href="#" class="header_nav_a">
@@ -97,7 +98,7 @@
                 <div class="header__social__search" id="header__social__search">
 
                     <!-- <button id="header__social__search_btn" class="header__social__search_btn"> -->
-                    
+
                     </button>
                 </div>
             </div>
@@ -142,15 +143,17 @@
             <!-- 1 -->
             <div class="mytaskbox__div">
                 <!-- check box -->
-               <div class="checkbox">
-                    <img src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png"/>
+                <div class="checkbox">
+                    <img
+                        src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png" />
                 </div>
                 <p class="taskbox__p">Track Your Food: Eat Within Your Goal<br>
                     <h id="taskbox__h">1 point / food tracked</h>
                 </p>
                 <p class="calories">1870 - 2720<br>
                     <h id="calories__h">calorie goal</h>
-                    <h class="tasks" id="task__"><a href="/Track_food/myNutrition.html" style="text-decoration: none;">Track Food</a>
+                    <h class="tasks" id="task__"><a href="/Track_food/myNutrition.html"
+                            style="text-decoration: none;">Track Food</a>
                     </h>
                 </p>
                 <i class="fas fa-angle-right"></i>
@@ -159,7 +162,8 @@
             <div class="mytaskbox__div">
                 <!-- check box -->
                 <div class="checkbox">
-                    <img src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png"/>
+                    <img
+                        src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png" />
                 </div>
                 <p class="taskbox__p">Exercise 10+ minutes<br>
                     <h id="taskbox__h">1 point / 5 minutes</h>
@@ -174,22 +178,37 @@
             <div class="mytaskbox__div">
                 <!-- check box -->
                 <div class="checkbox">
-                    <img src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png"/>
+                    <img id="spin"
+                        src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png" />
                 </div>
                 <p class="taskbox__p">Spin the spark points wheel<br>
                     <h id="taskbox__h"></h>
                 </p>
                 <p class="calories">
-                    <h class="tasks2">Spin Now
+                    <h class="tasks2" id="myBtn">Spin Now
                     </h>
                 </p>
                 <i class="fas fa-angle-right"></i>
             </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="chart"></div>
+                    <div id="question">
+                        <h1></h1>
+                    </div>
+                </div>
+
+            </div>
             <!-- 4 -->
             <div class="mytaskbox__div">
                 <!-- check box -->
-                <div class="checkbox"  >
-                    <img id="watercheckbox" src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png"/>
+                <div class="checkbox">
+                    <img id="watercheckbox"
+                        src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png" />
                 </div>
                 <p class="taskbox__p">Drink 8 glasses of water<br>
                     <h id="taskbox__h">5 points</h>
@@ -208,8 +227,9 @@
             <!-- 5 -->
             <div class="mytaskbox__div" style="border: none;">
                 <!-- check box -->
-               <div class="checkbox">
-                    <img id="planbox" src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png"/>
+                <div class="checkbox">
+                    <img id="planbox"
+                        src="https://blackstone.edu/wp-content/uploads/2020/01/green-tick-png-green-tick-png-file-570.png" />
                 </div>
                 <p class="taskbox__p">Plan your day<br>
                     <h id="taskbox__h">5 points</h>
@@ -243,7 +263,7 @@
             <!-- round box -->
             <div class="round_outer">
                 <div class="round_inner">
-                    <p>0</p>
+                    <p id="sparkpoints">0</p>
                 </div>
             </div>
             <p class="goal">Goal: 25</p>
@@ -706,63 +726,62 @@
 
 
     <script src="https://kit.fontawesome.com/03838ecf43.js" crossorigin="anonymous"></script>
-
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="spinwheel.js"></script>
 
     <script>
-       
 
-        document.getElementById("plus").addEventListener("click",plus)
-        document.getElementById("minus").addEventListener("click",minus)
+
+        document.getElementById("plus").addEventListener("click", plus)
+        document.getElementById("minus").addEventListener("click", minus)
         let count = 0
-        function plus()
-        {
-            
+        function plus() {
+
             count++
-            localStorage.setItem("count",count)
-            
-        let text = document.getElementById("count")
-        let val = localStorage.getItem("count")
-        text.innerHTML = val
+            localStorage.setItem("count", count)
 
-        let watercheckbox = document.getElementById("watercheckbox")
-        let planbox= document.getElementById("planbox")
-        let a =  localStorage.getItem("count")  
-        if(a>8)
-        {
-            planbox.style.visibility="visible"
-            watercheckbox.style.visibility = "visible"
-        }
-        
-      
-    
-       
+            let text = document.getElementById("count")
+            let val = localStorage.getItem("count")
+            text.innerHTML = val
+
+            let watercheckbox = document.getElementById("watercheckbox")
+            let planbox = document.getElementById("planbox")
+            let a = localStorage.getItem("count")
+            if (a > 8) {
+                planbox.style.visibility = "visible"
+                watercheckbox.style.visibility = "visible"
+            }
+
+
+
+
         }
 
-        function minus()
-        {
+        function minus() {
             count--
-            localStorage.setItem("count",count)
-            
-        let text = document.getElementById("count")
-        let val = localStorage.getItem("count")
-        text.innerHTML = val
-       
-        let watercheckbox = document.getElementById("watercheckbox")
-        let planbox= document.getElementById("planbox")
-        let a =  localStorage.getItem("count")  
-        if(a>8)
-        {
-            watercheckbox.style.visibility = "visible"
-            planbox.style.visibility="visible"
-        }
-        if(a<8)
-        {
-            watercheckbox.style.visibility = "hidden"
-            planbox.style.visibility="hidden"
-        }
-        
+            localStorage.setItem("count", count)
+
+            let text = document.getElementById("count")
+            let val = localStorage.getItem("count")
+            text.innerHTML = val
+
+            let watercheckbox = document.getElementById("watercheckbox")
+            let planbox = document.getElementById("planbox")
+            let a = localStorage.getItem("count")
+            if (a > 8) {
+                watercheckbox.style.visibility = "visible"
+                planbox.style.visibility = "visible"
+            }
+            if (a < 8) {
+                watercheckbox.style.visibility = "hidden"
+                planbox.style.visibility = "hidden"
+            }
+
         }
 
+        localStorage.setItem("sparkpoints",0)
+        
+  
 
     </script>
 </body>

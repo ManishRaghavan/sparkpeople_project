@@ -240,11 +240,11 @@
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td style="background-color: rgb(255, 255, 188);">0</td>
-                <td >0</td>
-                <td style="background-color: rgb(255, 255, 188);">0</td>
-                <td >0</td>
-                <td style="background-color: rgb(255, 255, 188);" >0</td>
+                <td id="_breakfast6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_breakfast7" >0</td>
+                <td  id="_breakfast8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_breakfast9" >0</td>
+                <td  id="_breakfast10" style="background-color: rgb(255, 255, 188);" >0</td>
             </tr>
             <!-------------------------------------- breakfast ends ------------------------------------------>
             <!-------------------------------------- lunch start ------------------------------------------>
@@ -286,11 +286,11 @@
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td style="background-color: rgb(255, 255, 188);">0</td>
-                <td >0</td>
-                <td style="background-color: rgb(255, 255, 188);">0</td>
-                <td >0</td>
-                <td style="background-color: rgb(255, 255, 188);" >0</td>
+                <td id="_lunch6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_lunch7" >0</td>
+                <td id="_lunch8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_lunch9">0</td>
+                <td id="_lunch10" style="background-color: rgb(255, 255, 188);" >0</td>
             </tr>
 
             <!-------------------------------------- lunch ends ------------------------------------------>
@@ -333,11 +333,11 @@
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td style="background-color: rgb(255, 255, 188);">0</td>
-                <td >0</td>
-                <td style="background-color: rgb(255, 255, 188);">0</td>
-                <td >0</td>
-                <td style="background-color: rgb(255, 255, 188);" >0</td>
+                <td id="_dinner6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_dinner7" >0</td>
+                <td id="_dinner8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_dinner9" >0</td>
+                <td id="_dinner10" style="background-color: rgb(255, 255, 188);" >0</td>
             </tr>
 
             <!-------------------------------------- dinner ends ------------------------------------------>
@@ -414,11 +414,11 @@
                 <th> </th>
                 <th> </th>
                 <th>Total: </th>
-                <th style="background-color: rgb(241, 241, 241);">0</th>
-                <th >0</th>
-                <th style="background-color: rgb(241, 241, 241);">0</th>
-                <th>0</th>
-                <th style="background-color: rgb(241, 241, 241);">0</th>
+                <th id="total1" style="background-color: rgb(241, 241, 241);">0</th>
+                <th id="total2" >0</th>
+                <th id="total3" style="background-color: rgb(241, 241, 241);">0</th>
+                <th id="total4" >0</th>
+                <th id="total5" style="background-color: rgb(241, 241, 241);">0</th>
             </tr>
             <tr style="height:40px;background-color: rgb(255, 255, 188);">
                 <th></th>
@@ -605,7 +605,7 @@
         }
 
         document.getElementById("addfood").addEventListener("click",add)
-
+       
 function add()
 { 
     let input = document.getElementById("input").value
@@ -618,28 +618,67 @@ function add()
     document.getElementById("_breakfast3").textContent = 55
     document.getElementById("_breakfast4").textContent =33
     document.getElementById("_breakfast5").textContent = 120
-    localStorage.setItem("breakfast",[72,33,55,33,120])
-    // let d1 = localStorage.getItem("breakfast")
-    // let d2 = localStorage.getItem("lunch")
-    // let d3 = localStorage.getItem("dinner")
-    // let d4 = localStorage.getItem("snacks")
+   
+    localStorage.setItem("breakfast",JSON.stringify([72,33,55,33,120]))
 
-    // let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
-    // let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
-    // let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
-    // let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
-    // console.log(c1)
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5
+
+    
+    document.getElementById("_breakfast6").textContent = 72
+    document.getElementById("_breakfast7").textContent = 33
+    document.getElementById("_breakfast8").textContent = 55
+    document.getElementById("_breakfast9").textContent = 33
+    document.getElementById("_breakfast10").textContent = 120
 
     }
     if(val == "lunch")
     {
         document.getElementById("_lunch").textContent = input
-    document.getElementById("_lunch1").textContent = 172
+    document.getElementById("_lunch1").textContent = 272
     document.getElementById("_lunch2").textContent = 53
     document.getElementById("_lunch3").textContent = 73
     document.getElementById("_lunch4").textContent =33
     document.getElementById("_lunch5").textContent = 20
-    localStorage.setItem("lunch",[72,33,55,33,120])
+    document.getElementById("_lunch6").textContent = 172
+    document.getElementById("_lunch7").textContent = 53
+    document.getElementById("_lunch8").textContent = 70
+    document.getElementById("_lunch9").textContent =33
+    document.getElementById("_lunch10").textContent = 20
+    localStorage.setItem("lunch",JSON.stringify([72,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5
     }
     if(val == "dinner")
     {
@@ -649,7 +688,30 @@ function add()
     document.getElementById("_dinner3").textContent = 70
     document.getElementById("_dinner4").textContent =33
     document.getElementById("_dinner5").textContent = 20
-    localStorage.setItem("dinner",[72,33,55,33,120])
+    document.getElementById("_dinner6").textContent = 172
+    document.getElementById("_dinner7").textContent = 53
+    document.getElementById("_dinner8").textContent = 70
+    document.getElementById("_dinner9").textContent =33
+    document.getElementById("_dinner10").textContent = 20
+    localStorage.setItem("dinner",JSON.stringify([72,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5
     }
     if(val == "snacks")
     {
@@ -664,14 +726,33 @@ function add()
     document.getElementById("_snacks8").textContent = 70
     document.getElementById("_snacks9").textContent =33
     document.getElementById("_snacks10").textContent = 20
-    localStorage.setItem("snacks",[72,33,55,33,120])
+    localStorage.setItem("snacks",JSON.stringify([72,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5
     }
+
 }
 
-    localStorage.setItem("breakfast",[0,0,0,0,0])
-    localStorage.setItem("lunch",[0,0,0,0,0])
-    localStorage.setItem("dinner",[0,0,0,0,0])
-    localStorage.setItem("snacks",[0,0,0,0,0])
+    localStorage.setItem("breakfast",JSON.stringify([0,0,0,0,0]))
+    localStorage.setItem("lunch",JSON.stringify([0,0,0,0,0]))
+    localStorage.setItem("dinner",JSON.stringify([0,0,0,0,0]))
+    localStorage.setItem("snacks",JSON.stringify([0,0,0,0,0]))
 
    
     </script>
