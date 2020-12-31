@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="feed.css">
     <title>Community feed</title>
 </head>
+
 <body>
 
-     <!------------------------------------------- header ------------------------------------------------------------>
-     <div class="header">
+    <!------------------------------------------- header ------------------------------------------------------------>
+    <div class="header">
         <div class="header__nav">
             <div class="header__nav__logo">
                 <a href="#" class="header_nav_a">
@@ -117,9 +119,10 @@
     </div>
     <!------------------------------------------- header ends ------------------------------------------------------------>
     <h1 style="margin-left: 230px;">Community Goal Feed</h1>
-    <p style="margin-left: 230px;">Share updates, photos, & goals with the SparkPeople Community. Let's make 1 million posts<br> together! Learn more</p>
-      <!--////////////////////////////////////////////// Main Feed ////////////////////////////////////////////////////  -->
-      <div class="mainbox">
+    <p style="margin-left: 230px;">Share updates, photos, & goals with the SparkPeople Community. Let's make 1 million
+        posts<br> together! Learn more</p>
+    <!--////////////////////////////////////////////// Main Feed ////////////////////////////////////////////////////  -->
+    <div  class="mainbox" >
         <!-- input box -->
         <div class="postbox">
             <div class="postbox1">
@@ -127,7 +130,7 @@
                     SparkPeople Community. Let's make 1 million
                     posts together! Learn more</p>
             </div>
-            <div class="box2">
+            <div class="box2" id="myBtn">
                 <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
                 <p>Add to the feed here, or tap below to track a goal<br>
                     or a post or photo along with your post</p>
@@ -136,7 +139,7 @@
         </div>
         <!-- input box end -->
         <!-- ///////////////////feed box start /////////////////////////////-->
-        <div class="feedbox">
+        <div class="feedbox" id="feedbox">
             <h2 style="text-align: center;">Trending</h2>
             <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_filter.svg" />
             <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_add_user.svg" />
@@ -150,31 +153,48 @@
                 src="https://sparkpeo.hs.llnwd.net/e1/resize/475m475/e2/guid/41343404-137b-4911-b3c1-47ab90c62a30.jpeg" />
             <div class="commentbox">
                 <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_icon.svg" />
-                <h>5</h>
+                <h id="likecount">0</h>
                 <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_icon.svg" />
-                <h>0</h>
-                <div class="likebox">
-                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_btn_icon.svg" />
-                    <h>Like</h>
+                <h id="commentcount">0</h>
+                <div  class="likebox" >
+                    <img  src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_btn_icon.svg" />
+                    <h id="like" >Like.</h>
                 </div>
                 <div class="likebox2">
                     <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_btn_icon.svg" />
-                    <h>Comment</h>
+                    <h id="comment">Comment</h>
                 </div>
             </div>
-            <div class="commentsec_box">
-                <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
-                <p>
-                    <h style="color: #2B71BD;">REDROBIN47</h> Looking forward to it. <h style="color: #cccccc;">18
-                        seconds ago</h>
-                </p>
+            <div class="commentinput" id="commentinput">
+                <input style="padding: 20px;margin-left: 150px;" type="text" id="commentInputText"/>
+                <button id="commentthis">C O M M E N T</button>
             </div>
+            <div class="commentsec_box" id="commentsec_box" >
+                    
+            </div>
+            
         </div>
         <!-- ///////////////////feed box start ends /////////////////////////////-->
-</div>
+    </div>
 
-    <script >
 
-    </script>
+    <!--[[[[[[[[[[[[[[[[[[[[[[[[[[[[ popup ]]]]]]]]]]]]]]]]]]]]]]]]]]]]  -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <lable style="color: #2B71BD;margin-left: 50px;">POST</lable>
+            <input style="margin-left: 10px;" id="posttext" type="text" placeholder="post here"/>
+            <input id="photo" type="file" name="img" accept="image/*"/>
+            <button style="margin-left: 100px;margin-top: 50px;" id="post">P O S T</button>
+            
+        </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript" src="feed.js"></script>
 </body>
+
 </html>
