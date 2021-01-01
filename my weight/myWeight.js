@@ -49,6 +49,11 @@ BMI_btn.onclick = () => {
     BMI_popUp.style.display = "block";
 }
 
+let close_btn = document.getElementById("bmi_close")
+close_btn.onclick = () => {
+    BMI_popUp.style.display = "none"
+}
+
 window.onclick = function(event) {
     if (event.target == BMI_popUp) {
         BMI_popUp.style.display = "none";
@@ -97,7 +102,7 @@ save.onclick = () => {
 
     let target_weight_value = target_weight.value;
     if(target_weight_value.trim()){
-        var targetWeightData = localStorage.getItem("targetWeight")
+        targetWeightData = localStorage.getItem("targetWeight")
         if(targetWeightData == null){
             targetWeightData = []
         } else {
@@ -122,7 +127,7 @@ let day = document.getElementById("target_day").value
 let year = document.getElementById("target_year").value
 
 function getData() {
-    var targetWeightData = localStorage.getItem("targetWeight")
+    targetWeightData = localStorage.getItem("targetWeight")
     if(targetWeightData == null){
         targetWeightData = []
     } else {
@@ -141,15 +146,7 @@ function getData() {
     weight_info.innerHTML = html
 
 
-    // let targetValue = targetWeightData[targetWeightData.length-1].weight
-    // console.log(targetValue, update)
-    // let temp = targetValue - update
-    // if(temp >= 0){
-    //     weight_diff.innerHTML = temp
-    // } else if(temp < 0) {
-    //     temp = update - targetValue
-    //     weight_diff.innerHTML = `${temp} Pounds Gain`
-    // }
+    
 
 }
 
@@ -170,14 +167,204 @@ window.onclick = function(event) {
     }
 }
 
-let pushups = document.getElementById("pushups")
-let pushUps_check = document.getElementById("pushUps_check").checked
+fit_model_close.onclick = () => {
+    fit_model.style.display = "none"
+}
 
-pushups.addEventListener(onload, show())
-function show() {
-    if(pushUps_check){
+let pushups = document.getElementById("pushups")
+let pushUps_check = document.getElementById("pushUps_check")
+let fit_model_btn = document.getElementById("fit_model_btn")
+let crunches = document.getElementById("crunches")
+let crunches_check = document.getElementById("crunches_check")
+let stepTest = document.getElementById("stepTest")
+let step_check = document.getElementById("step_check")
+// fit_model_btn.addEventListener(onclick, fit_model_show())
+// pushups.addEventListener(onload, show())
+
+fit_model_btn.onclick = () => {
+    // Checking if pushUps is checked or not 
+    if(pushUps_check.checked){
+        pushups.style.display = "inline-block"
+    } else if(!pushUps_check.checked){
+        pushups.style.display = "none"
+
+    }
+    // Checking if crunches is checked or not 
+    if(crunches_check.checked){
+        crunches.style.display = "inline-block"
+    } else if(!crunches_check.checked) {
+        crunches.style.display = "none"
+    }
+
+    // Checking if stepTest is checked or not
+    if(step_check.checked) {
+        stepTest.style.display = "inline-block"
+    } else if(!step_check.checked) {
+        stepTest.style.display = "none"
+    }
+    showFitnessData()
+}
+
+
+// On Window loading checking whether Fitness more tests are added or not
+window.onload = () => {
+    // Checking if pushUps is checked or not 
+    if(pushUps_check.checked){
         pushups.style.display = "block"
     } else {
         pushups.style.display = "none"
+
+    }
+    // Checking if crunches is checked or not 
+    if(crunches_check.checked){
+        crunches.style.display = "block"
+    } else if(!crunches_check.checked) {
+        crunches.style.display = "none"
+    }
+
+    // Checking if stepTest is checked or not
+    if(step_check.checked) {
+        stepTest.style.display = "block"
+    } else if(!step_check.checked) {
+        stepTest.style.display = "none"
+    }
+    
+}
+
+// Getting of weight measurements, wellness, fitness, and health measurements.
+
+let your_weight = document.getElementById("head2_weight")
+let your_waist = document.getElementById("head2_waist")
+let your_hips = document.getElementById("head2_hips")
+let your_thighs = document.getElementById("head2_thigh")
+let your_upperArm = document.getElementById("head2_upperArm")
+let energy_measure = document.getElementById("wellness_energy")
+let stress_measure = document.getElementById("wellness_stress")
+let mood_measure = document.getElementById("wellness_mood")
+let pushup_count = document.getElementById("pushup_count")
+let crunches_count = document.getElementById("crunches_count")
+let step_count = document.getElementById("step_count")
+
+function storeFitnessData() {
+    // console.log("hello")
+
+    if(your_weight.value.trim()){
+        let weight_data = localStorage.getItem("weight") 
+        weight_data = your_weight.value
+        localStorage.setItem("weight", JSON.stringify(weight_data))
+    }
+    if(your_waist.value.trim()){
+        let waist_data = localStorage.getItem("waist") 
+        waist_data = your_waist.value
+        localStorage.setItem("waist", JSON.stringify(waist_data))
+    }
+    if(your_hips.value.trim()){
+        let hips_data = localStorage.getItem("hips") 
+        hips_data = your_hips.value
+        localStorage.setItem("hips", JSON.stringify(hips_data))
+    }
+    if(your_thighs.value.trim()){
+        let thighs_data = localStorage.getItem("thighs") 
+        thighs_data = your_thighs.value
+        localStorage.setItem("thighs", JSON.stringify(thighs_data))
+    }
+    if(your_upperArm.value.trim()){
+        let upperArm_data = localStorage.getItem("Upper_arm") 
+        upperArm_data = your_upperArm.value
+        localStorage.setItem("Upper_arm", JSON.stringify(upperArm_data))
+    }
+    if(energy_measure.value.trim()){
+        let energy_measure_data = localStorage.getItem("energy_measure") 
+        energy_measure_data = energy_measure.value
+        localStorage.setItem("energy_measure", JSON.stringify(energy_measure_data))
+    }
+    if(stress_measure.value.trim()){
+        let stress_measure_data = localStorage.getItem("stress_measure") 
+        stress_measure_data = stress_measure.value
+        localStorage.setItem("stress_measure", JSON.stringify(stress_measure_data))
+    }
+    if(mood_measure.value.trim()){
+        let mood_measure_data = localStorage.getItem("mood_measure") 
+        mood_measure_data = mood_measure.value
+        localStorage.setItem("mood_measure", JSON.stringify(mood_measure_data))
+    }
+    if(pushup_count.value.trim()){
+        let pushup_count_data = localStorage.getItem("pushup_count") 
+        pushup_count_data = pushup_count.value
+        localStorage.setItem("pushup_count", JSON.stringify(pushup_count_data))
+    }
+    if(crunches_count.value.trim()){
+        let crunches_count_data = localStorage.getItem("crunches_count") 
+        crunches_count_data = crunches_count.value
+        localStorage.setItem("crunches_count", JSON.stringify(crunches_count_data))
+    }
+    if(step_count.value.trim()){
+        let step_count_data = localStorage.getItem("step_count") 
+        step_count_data = step_count.value
+        localStorage.setItem("step_count", JSON.stringify(step_count_data))
+    }
+    showFitnessData()
+
+    your_weight.value = ""
+    your_waist.value = ""
+    your_hips.value = ""
+    your_thighs.value = ""
+    your_upperArm.value = ""
+    energy_measure.value = ""
+    stress_measure.value = ""
+    mood_measure.value = ""
+    pushup_count.value = ""
+    crunches_count.value = ""
+    step_count.value = ""
+}
+
+let show_weight = document.getElementById("show_weight")
+let show_waist = document.getElementById("show_waist")
+let show_hips = document.getElementById("show_hips")
+let show_thigh = document.getElementById('show_thigh')
+let Show_upperArm = document.getElementById("Show_upperArm")
+let show_energy = document.getElementById("show_energy")
+let show_stress = document.getElementById("show_stress")
+let show_mood = document.getElementById("show_mood")
+let show_pushups = document.getElementById("show_pushups")
+let show_crunches = document.getElementById("show_crunches")
+let show_step = document.getElementById("show_step")
+
+function showFitnessData() {
+    let today = new Date().toLocaleDateString()
+    let weight_data = JSON.parse(localStorage.getItem("weight"))
+    let waist_data = JSON.parse(localStorage.getItem("waist"))
+    let hips_data = JSON.parse(localStorage.getItem("hips"))
+    let thighs_data = JSON.parse(localStorage.getItem("thighs"))
+    let upperArm_data = JSON.parse(localStorage.getItem("Upper_arm"))
+    let energy_measure_data = JSON.parse(localStorage.getItem("energy_measure"))
+    let stress_measure_data = JSON.parse(localStorage.getItem("stress_measure"))
+    let mood_measure_data = JSON.parse(localStorage.getItem("mood_measure"))
+    let pushup_count_data = JSON.parse(localStorage.getItem("pushup_count"))
+    let crunches_count_data = JSON.parse(localStorage.getItem("crunches_count"))
+    let step_count_data = JSON.parse(localStorage.getItem("step_count"))
+    show_weight.innerHTML = `${weight_data}`
+    show_waist.innerHTML = waist_data
+    show_hips.innerHTML = hips_data
+    show_thigh.innerHTML = thighs_data
+    Show_upperArm.innerHTML = upperArm_data
+    show_energy.innerHTML = energy_measure_data
+    show_stress.innerHTML = stress_measure_data
+    show_mood.innerHTML = mood_measure_data
+    show_pushups.innerHTML = pushup_count_data
+    show_crunches.innerHTML = crunches_count_data
+    show_step.innerHTML = step_count_data
+
+    let targetValue = targetWeightData[targetWeightData.length-1].weight
+    console.log(targetValue, weight_data)
+
+    let temp = targetValue - weight_data
+    if(temp >= 0){
+        weight_diff.innerHTML = `${temp} Pounds Lost`
+    } else if(temp < 0) {
+        temp = update - targetValue
+        weight_diff.innerHTML = `${temp} Pounds Gain`
     }
 }
+
+showFitnessData()

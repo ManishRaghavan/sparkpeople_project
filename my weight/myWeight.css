@@ -362,7 +362,10 @@
     padding: 5px;
     font-size: 16px;
 }
-.inputs_info button, .bmi_save{
+.inputs_info button, 
+.bmi_save, 
+.fit_model_btn,
+.fit_model_close{
     display: block;
     margin-top: 10px;
     font-size: 16px;
@@ -377,7 +380,11 @@
 .inputs_info button:focus,
 .inputs_info button:active,
 .bmi_save:focus,
-.bmi_save:active{
+.bmi_save:active,
+.fit_model_btn:active,
+.fit_model_btn:focus,
+.fit_model_close:active,
+.fit_model_close:focus{
     outline: none;
 }
 .bmi_you{
@@ -397,6 +404,7 @@
 }
 .bmi_save{
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 .Fitness_model{
@@ -422,4 +430,10 @@
     background-color: white;
     margin: auto;
     padding: 30px 60px;
+}
+
+.fit_model_btn, .fit_model_close{
+    background-color: #01a0a0;
+    border: 1px solid #01a0a0;
+    display: inline-block;
 }

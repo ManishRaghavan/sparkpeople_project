@@ -16,7 +16,7 @@
             <div class="weightloss_Box">
                 <div class="weightloss_home">
                     <div class="home_header">
-                        <h1><span id="weight_diff">0</span> Pounds Lost</h1>
+                        <h1><span id="weight_diff">0 Pounds Lost</span></h1>
                         <p id="weight_info">Goal to go from 143 to 143 by 12/29/2021, Last weigh-in </p> <span id="last_weight">65</span> <span>KG</span>
                         <button id="bmi_popUp" >Edit Weight Goal</button>
                     </div>
@@ -25,13 +25,13 @@
             <div class="othergoals_calender">
                 <div class="othergoals_date">
                     <button class="date_leftArrow"></button>
-                    <button class="date_show">Sunday, December 27</button>
+                    <button class="date_show">Saturday, January 2</button>
                     <button class="calender_symbol"></button>
                     <button class="date_rightArrow"></button>
                 </div>
             </div>
             <div class="myweight_tracker_top">
-                <button class="myweight_tracker_top_green">Save Measurements</button>
+                <button class="myweight_tracker_top_green" onclick="storeFitnessData()">Save Measurements</button>
                 <button class="myweight_tracker_top_blue">View/Sync Wifi Devices</button>
             </div>
             <div class="myweight_tracker">
@@ -64,11 +64,11 @@
                         <div><input type="number" id="head2_upperArm" size="5"></div>
                     </div>
                     <div class="weights_data_Lentry">
-                        <div>&nbsp</div>
-                        <div>&nbsp</div>
-                        <div>&nbsp</div>
-                        <div>&nbsp</div>
-                        <div>&nbsp</div>
+                        <div id="show_weight">&nbsp</div>
+                        <div id="show_waist">&nbsp</div>
+                        <div id= "show_hips">&nbsp</div>
+                        <div id="show_thigh">&nbsp</div>
+                        <div id="Show_upperArm">&nbsp</div>
                     </div>
                     <div class="weights_data_Recommend">
                         <div>weekly</div>
@@ -87,40 +87,45 @@
                 </div>
                 <div class="wellness_data">
                     <div class="wellness_data_head">
-                        <div>Energy Level</div>
-                        <div>Stress Level</div>
-                        <div>Mood</div>
+                        <div> Energy Level</div>
+                        <div> Stress Level</div>
+                        <div> Mood</div>
                     </div>
                     <div class="wellness_data_value">
-                        <select name="EnergyLevel">
-                            <option value=""></option>
+                        <select name="EnergyLevel" id="wellness_energy">
+                            <option value="" selected=""></option>
                             <option value="5">5 (very high) </option>
                             <option value="4">4 (high) </option>
                             <option value="3">3 (moderate) </option>
                             <option value="2">2 (low) </option>
                             <option value="1">1 (very low) </option>
                         </select>
-                        <select name="EnergyLevel">
-                            <option value=""></option>
+                        <select name="StressLevel" id="wellness_stress">
+                            <option value="" selected=""></option>
                             <option value="5">5 (very high) </option>
                             <option value="4">4 (high) </option>
                             <option value="3">3 (moderate) </option>
                             <option value="2">2 (low) </option>
                             <option value="1">1 (very low) </option>
                         </select>
-                        <select name="StressLevel">
-                            <option value=""></option>
-                            <option value="5">5 (very high) </option>
-                            <option value="4">4 (high) </option>
-                            <option value="3">3 (moderate) </option>
-                            <option value="2">2 (low) </option>
-                            <option value="1">1 (very low) </option>
+                        <select name="MoodLevel" id="wellness_mood">
+                            <option value="" selected=""></option>
+                            <option value="10">10 (very high) </option>
+                            <option value="9">9  </option>
+                            <option value="8">8 (high) </option>
+                            <option value="7">7 </option>
+                            <option value="6">6  </option>
+                            <option value="5">5 (moderate) </option>
+                            <option value="4">4</option>
+                            <option value="3">3 (low) </option>
+                            <option value="2">2  </option>
+                            <option value="1">1  (very low)</option>
                         </select>
                     </div>
                     <div class="wellness_data_Lentry">
-                        <div>&nbsp</div>
-                        <div>&nbsp</div>
-                        <div>&nbsp</div>
+                        <div id="show_energy">&nbsp</div>
+                        <div id="show_stress">&nbsp</div>
+                        <div id="show_mood">&nbsp</div>
                     </div>
                     <div class="wellness_data_recommend">
                         <div>Daily</div>
@@ -139,24 +144,24 @@
                 <div class="fitness_addons" id="pushups">
                     <div class="pushups">
                         <div class="pushups_content">pushUps</div>
-                        <input type="number" size="5" class="pushups_input">
-                        <div class="pushups_data">&nbsp;</div>
-                        <div class="recommend">Monthly</div>
+                        <input type="number" size="5" class="pushups_input" id="pushup_count">
+                        <div class="pushups_data" style="text-align: center;" id="show_pushups">&nbsp;</div>
+                        <div style="padding-left: 50px;" class="recommend">Monthly</div>
                     </div>
                 </div>
                 <div class="fitness_addons" id="crunches">
                     <div class="pushups">
                         <div class="pushups_content">Crunches</div>
-                        <input type="number" size="5" class="pushups_input">
-                        <div class="pushups_data">&nbsp;</div>
+                        <input type="number" size="5" class="pushups_input" id="crunches_count">
+                        <div class="pushups_data" id="show_crunches">&nbsp;</div>
                         <div class="recommend">Monthly</div>
                     </div>
                 </div>
                 <div class="fitness_addons" id="stepTest">
                     <div class="step">
                         <div class="step_content">3-Minute Step Test </div>
-                        <input type="number" size="5" class="step_input">
-                        <div class="pushups_data">&nbsp;</div>
+                        <input type="number" size="5" class="step_input" id="step_count">
+                        <div class="pushups_data" id="show_step">&nbsp;</div>
                         <div class="recommend">Monthly</div>
                     </div>
                 </div>
@@ -169,7 +174,7 @@
                     </div>
                 </div>
                 <div class="myweight_tracker_bottom">
-                    <button class="myweight_tracker_top_green">Save Measurements</button>
+                    <button class="myweight_tracker_top_green" onclick="storeFitnessData()">Save Measurements</button>
                 </div>
             </div>
             <div class="myweight_footer">
@@ -187,7 +192,7 @@
                         <img src="https://www.sparkpeople.com/assets/diet4/nt7_tools_h_bg.svg" alt="tools">
                         <h1>Tools & Settings</h1>
                     </div>
-                    <div class="tools1" onclick="addon_measurements()">Add/Change What You Measure</div>
+                    <div class="tools1" onclick="addon_measurements()" style="cursor: pointer;">Add/Change What You Measure</div>
                     <div class="tools1">Printable Tape Measure</div>
                     <div class="tools1">Join our Virtual Weigh-In SparkTeam</div>
                 </div>
@@ -306,6 +311,7 @@
                 </div>
             </div>
             <button class="bmi_save" id="bmi_save">Save Your Changes</button>
+            <button class="bmi_save" id="bmi_close">Close</button>
         </div>
     </div>
 
@@ -329,7 +335,7 @@
                         <p style="display: inline-block;"><strong>Pushups</strong> (monthly) - Do as many as possible in one minute</p>
                     </div>
                     <div>
-                        <input type="checkbox" id="cruches_check">
+                        <input type="checkbox" id="crunches_check">
                         <div style="display: inline-block;"><strong>Crunches</strong> (monthly) - Do as many as possible in one minute</div>
                     </div>
                     <div>
@@ -358,6 +364,8 @@
                     </div>                
                 </div>
             </div>
+            <button class="fit_model_btn" id="fit_model_btn">Save Changes</button>
+            <button class="fit_model_close" id="fit_model_close">Close</button>
         </div>
       
     </div>
