@@ -116,7 +116,8 @@ save.onclick = () => {
 
     targetWeightData.push({weight:target_weight_value})
     localStorage.setItem("targetWeight", JSON.stringify(targetWeightData))
-    target_weight.value = ""     
+    target_weight.value = ""
+    getData()   
 }
 
 
@@ -144,10 +145,6 @@ function getData() {
         html = `Goal to go from ${update} to ${item.weight} by ${month}/${day}/${year}, Last weigh-in`
     })
     weight_info.innerHTML = html
-
-
-    
-
 }
 
 getData()
