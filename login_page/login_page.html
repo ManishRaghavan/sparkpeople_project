@@ -123,7 +123,7 @@
             </div>
             <div class="username">
                 <p>Password:</p>
-                <input type="text" id="userpassword_input" class="password_input"/>
+                <input type="password" id="userpassword_input" class="password_input"/>
             </div>
             <div class="checkbox_flex">
                 <form class="checkbox">
@@ -182,7 +182,12 @@
            {
                console.log("yes2")
            }
-           else if(name !== data.user_name || password !== data.user_password)
+           if(name !== data.user_name )
+           {
+                alert("User name or Password is wrong \n"+ "Check Again")
+                console.log("name not matches")
+           }
+            if(password !== data.user_password )
            {
                 alert("User name or Password is wrong \n"+ "Check Again")
            }
