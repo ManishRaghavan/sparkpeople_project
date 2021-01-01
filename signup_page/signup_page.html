@@ -17,17 +17,17 @@
                 <div class="signup_username_1">
                     <p class="username_1">Username:<br><span class="specs">(6 - 15 characters)</span></p>
                 </div>
-                <input type="text" class="signup_username_input"/>
+                <input type="text" id="user_name" class="signup_username_input"/>
                 </div>
                 <div class="signup_username">
                     <p class="username_2">Email:</p>
-                    <input type="text" class="signup_email_input"/>
+                    <input type="text" id="user_email" class="signup_email_input"/>
                 </div>
                 <div class="signup_username">
                     <div>
                         <p class="username_3">Password:<br><span>(case sensitive)</span></p>
                     </div>
-                    <input type="text" class="signup_password_input"/>
+                    <input type="text" id="user_password" class="signup_password_input"/>
                 </div>
                 <!-- <img class="signup_logo" src="Capture-removebg-preview.png"/> -->
             <div class="email">
@@ -40,9 +40,28 @@
             <input type="checkbox" id="remember" name="remember" class="robot_button">
             <label for="checkbox" class="robot_text">I'm not a robot</label>
             <p class="signup_success_story">Over <span class="success_story_span">15,000,000</span> members have reached their goals with SparkPeople<br> -you could be our next success story!</p>
-            <button class="create_account">Create your FREE Account</button>
+            <button class="create_account" id="create_account">Create your FREE Account</button>
             <p class="disclaimer">By clicking the button above, I have read, understand, and agree to SparkPeople's <span class="disclaimer_tc">Terms and Conditions</span> and <span class="disclaimer_tc">Privacy Policy</span></p>
         </div>
     </div>
+    <script>
+        
+
+        document.getElementById("create_account").addEventListener("click",create)
+        
+        function create()
+        {
+            
+        let user_data = {
+             user_name : document.getElementById("user_name").value,
+         user_email : document.getElementById("user_email").value,
+         user_password : document.getElementById("user_password").value,
+   
+        }
+        localStorage.setItem("user_data",JSON.stringify(user_data))
+        
+        }
+        
+    </script>
 </body>
 </html>

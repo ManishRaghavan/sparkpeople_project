@@ -449,7 +449,7 @@
                 <th style="background-color: rgb(241, 241, 241);">	25 - 35</th>
             </tr>
         </table>
-        <p style="margin-left: 20px;">You've burned 0 calories today</p>
+        <p style="margin-left: 20px;" id="cal">You've burned 0 calories today</p>
         <h1 style="margin-left: 20px;">Weekly Progerss</h1>
 
         <!-- bottom table/////////////////////////////////////////////////////// -->
@@ -635,10 +635,10 @@ function add()
     
     document.getElementById("total1").textContent = c1
     document.getElementById("total2").textContent = c2
-    document.getElementById("total3").textContent = c3
+    document.getElementById("total3").textContent = c3/10
     document.getElementById("total4").textContent = c4
-    document.getElementById("total5").textContent = c5
-
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
     
     document.getElementById("_breakfast6").textContent = 72
     document.getElementById("_breakfast7").textContent = 33
@@ -660,7 +660,7 @@ function add()
     document.getElementById("_lunch8").textContent = 70
     document.getElementById("_lunch9").textContent =33
     document.getElementById("_lunch10").textContent = 20
-    localStorage.setItem("lunch",JSON.stringify([72,33,55,33,120]))
+    localStorage.setItem("lunch",JSON.stringify([272,33,55,33,120]))
 
     let d1 =JSON.parse( localStorage.getItem("breakfast"))
     let d2 = JSON.parse(localStorage.getItem("lunch"))
@@ -676,9 +676,10 @@ function add()
     
     document.getElementById("total1").textContent = c1
     document.getElementById("total2").textContent = c2
-    document.getElementById("total3").textContent = c3
+    document.getElementById("total3").textContent = c3/10
     document.getElementById("total4").textContent = c4
-    document.getElementById("total5").textContent = c5
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
     }
     if(val == "dinner")
     {
@@ -709,9 +710,10 @@ function add()
     
     document.getElementById("total1").textContent = c1
     document.getElementById("total2").textContent = c2
-    document.getElementById("total3").textContent = c3
+    document.getElementById("total3").textContent = c3/10
     document.getElementById("total4").textContent = c4
-    document.getElementById("total5").textContent = c5
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
     }
     if(val == "snacks")
     {
@@ -742,9 +744,11 @@ function add()
     
     document.getElementById("total1").textContent = c1
     document.getElementById("total2").textContent = c2
-    document.getElementById("total3").textContent = c3
+    document.getElementById("total3").textContent = c3/10
     document.getElementById("total4").textContent = c4
-    document.getElementById("total5").textContent = c5
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
+
     }
 
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
     <link rel="stylesheet" href="login_page.css">
 </head>
 <body>
@@ -101,7 +101,7 @@
             <div class="nav_btns">
                 <ul class="nav_btns_help">
                     <li>Help</li>
-                    <li class="nav_btns_hover">RANJITHKUMARK8 <img
+                    <li class="nav_btns_hover">Not logged in<img
                             src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_blue_arrow_down.svg">
                         <ul class="nav_btns_submenu">
                             <li>Account/E-Mail Preferences</li>
@@ -119,11 +119,11 @@
             <h3>Already a Member? <spam>-Log in Here</spam></h3>
             <div class="username">
                 <p>Username:</p>
-                <input type="text" class="username_input"/>
+                <input type="text" id="username_input" class="username_input"/>
             </div>
             <div class="username">
                 <p>Password:</p>
-                <input type="text" class="password_input"/>
+                <input type="text" id="userpassword_input" class="password_input"/>
             </div>
             <div class="checkbox_flex">
                 <form class="checkbox">
@@ -131,7 +131,7 @@
                     <label for="checkbox" class="remember_text">Remember me</label>
                     <p class="forgot_password">Forgot Your Password</p>
                 </form>
-                <button class="login_button">Log in Now</button>
+                <button id="login_button" class="login_button">Log in Now</button>
             </div>
         </div>
         <div class="lower_half">
@@ -162,5 +162,32 @@
         <p class="disclaimer">By clicking one of the above buttons, you're indicating that you have read and agree to SparkPeople's <span class="disclaimer_tc">Terms and Conditions</span> and <span class="disclaimer_tc">Privacy Policy</span> and that you're at least 18 years of age.</p>
     </div>
     <script src="./header.js"></script>
+    <script>
+        document.getElementById("login_button").addEventListener("click",login)
+
+        function login()
+        {
+          let name =  document.getElementById("username_input").value 
+           let password =  document.getElementById("userpassword_input").value
+
+           let d = localStorage.getItem("user_data")
+
+           let data = JSON.parse(d)
+
+           if(name === data.user_name)
+           {
+               console.log("yes")
+           }
+           if(password === data.user_password)
+           {
+               console.log("yes2")
+           }
+           else if(name !== data.user_name || password !== data.user_password)
+           {
+                alert("User name or Password is wrong \n"+ "Check Again")
+           }
+        }
+        
+    </script>
 </body>
 </html>
