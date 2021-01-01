@@ -109,3 +109,31 @@
     document.getElementById("commentsec_box").innerHTML += html2
     
   }
+
+  document.getElementById("trend").addEventListener("click",trend)
+
+  function trend()
+  {
+  
+    document.getElementById("trend_display").style.display ="block"
+    document.getElementById("feedbox").style.display="none"
+    document.getElementById("popular_display").style.display ="none"
+  }
+
+  document.getElementById("popular").addEventListener("click",popular)
+
+  function popular()
+  {
+    document.getElementById("trend_display").style.display ="none"
+    document.getElementById("feedbox").style.display="none"
+    document.getElementById("popular_display").style.display ="block"
+  }
+
+  document.getElementById("follow").addEventListener("click",follow)
+
+  function follow()
+  {
+    document.getElementById("trend_display").style.display ="none"
+    document.getElementById("feedbox").style.display="block"
+    document.getElementById("popular_display").style.display ="none"
+  }

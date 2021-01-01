@@ -1,0 +1,139 @@
+body {
+    background-color:  rgb(216, 214, 214);
+}
+.signup_container {
+    height: 700px;
+    width: 800px;
+    margin-left: 300px;
+    background-color: rgb(221, 219, 219);
+    border: 1px solid rgb(201, 200, 200);
+}
+.signup_1 {
+    height: 80px;
+    background-color: white;
+}
+.signup_1 > img {
+    height: 50px;
+    margin-top: 15px;
+}
+.signup_2 {
+    color: teal;
+    font-weight: bold;
+    text-align: center;
+}
+.signup_3 {
+    height: 480px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+}
+.signup_username {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+}
+.signup_username_input {
+    height: 30px;
+    width: 200px;
+    border: 1px solid rgb(145, 144, 144);
+    border-radius: 3px;
+    margin-top: 25px;
+    margin-left: 50px;
+    box-shadow: inset 0px 0px 10px rgba(124, 123, 123, 0.5);
+}
+.signup_email_input {
+    height: 30px;
+    width: 200px;
+    border: 1px solid rgb(145, 144, 144);
+    border-radius: 3px;
+    margin-top: 1px;
+    margin-left: 95px;
+    box-shadow: inset 0px 0px 10px rgba(124, 123, 123, 0.5);
+}
+.signup_password_input {
+    height: 30px;
+    width: 200px;
+    border: 1px solid rgb(145, 144, 144);
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 40px;
+    box-shadow: inset 0px 0px 10px rgba(124, 123, 123, 0.5);
+}
+.username_1 {
+    font-weight: bold;
+    margin-top: 30px;
+}
+.specs {
+    font-size: 12px;
+    margin-top: 0px;
+}
+.signup_username_1 >p:first-child {
+    font-weight: bold;
+    margin-top: 30px;
+}
+.username_2 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.username_3 {
+    font-weight: bold;
+    margin-top: px;
+}
+.email {
+    display: flex;
+    flex-direction: row;
+    margin-left:175px;
+}
+.email_preference {
+    margin-top: 0px;
+    font-size: 17px;
+}
+.best_spark {
+    font-size: 12px;
+    margin-top: 2px;
+}
+.best_spark1 {
+    margin-left: 20px;
+}
+.robot_button {
+    margin-left: 45%;
+}
+.robot_text {
+    font-size: 17px;
+}
+.signup_success_story {
+    text-align: center;
+    font-weight: bold;
+}
+.success_story_spam {
+    font-size: 15px;
+    font-weight: bold;
+}
+.create_account {
+    height: 50px;
+    width: 250px;
+    background-color: rgb(42, 91, 252);
+    border: 1px solid rgb(42, 91, 252);
+    border-radius: 3px;
+    margin-left: 33%;
+    margin-top: 20px;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.create_account:hover {
+    background-color: rgb(62, 106, 252);
+}
+.disclaimer {
+    font-size: 11px;
+    color: black;
+    text-align: center;
+}
+.disclaimer_tc {
+    color: rgb(56, 56, 248);
+    text-decoration: underline;
+}
+.disclaimer_tc:hover {
+    color:rgb(101, 101, 248);
+}
