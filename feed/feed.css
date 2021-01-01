@@ -503,9 +503,8 @@ body{
 
   .trending_box
   {
-    height: 500px;
-    width: 1000px;
-    color: rgb(224, 8, 8);
-    float: left;
-    margin-left: 500px;
+    height: 150px;
+    width: 603px;
+    background-color:#e4e4e4;
+    margin-left: 230px;
   }

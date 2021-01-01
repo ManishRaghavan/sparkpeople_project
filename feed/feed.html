@@ -123,7 +123,16 @@
         posts<br> together! Learn more</p>
                 <!-- ------------------------------------------- ------------------------------------------------------------ -->
                 <div class="trending_box">
-            
+                    <h1 style="text-align: center;">Filter</h1>
+                <input style="margin-left: 50px;margin-top: 20px;" type="radio" id="trend" />
+                <label style="font-size: 20px; margin-left: 10px;">Trending</label>
+
+                <input style="margin-left: 50px;margin-top: 10px;" type="radio" id="popular" />
+                <label style="font-size: 20px; margin-left: 10px;">Popular</label>
+
+                <input style="margin-left: 50px;margin-top: 10px;" type="radio" id="follow"  />
+                <label style="font-size: 20px; margin-left: 10px;">People I follow</label>
+                           
                 </div>
         
                      <!-- ------------------------------------------- ------------------------------------------------------------ -->
@@ -144,10 +153,11 @@
             </div>
         </div>
         <!-- input box end -->
+         
 
         <!-- ///////////////////feed box start /////////////////////////////-->
-        <div class="feedbox" id="feedbox">
-            <h2 style="text-align: center;">Trending</h2>
+        <div class="feedbox" id="feedbox" >
+            <h2 style="text-align: center;">People I follow</h2>
             <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_filter.svg" />
             <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_add_user.svg" />
             <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
@@ -185,6 +195,159 @@
 
         </div>
         
+        <!-- ///////////////////feed box start ends /////////////////////////////-->
+
+        <!-- ///////////////////feed box start /////////////////////////////-->
+        <div id="trend_display" style="display: none;">
+            <div class="feedbox" id="feedbox">
+                <h2 style="text-align: center;">Trending</h2>
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_filter.svg" />
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_add_user.svg" />
+                <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
+                <p style="margin-top: 40px;">JULIEHOLCOMB7<br>
+                    <h>30 minutes ago</h>
+                </p>
+                <p style="color: black;padding-left: 50px;padding-right: 50px;padding-top: 20px;">We’re in the midst of
+                    a snow/sleet storm. So, yes, I’m ready for summer!</p>
+                <img class="feedbox_postimg"
+                    src="https://wallpaperaccess.com/full/796831.png" />
+                <div class="commentbox">
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_icon.svg" />
+                    <h id="likecount">0</h>
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_icon.svg" />
+                    <h id="commentcount">0</h>
+                    <div  class="likebox" >
+                        <img  src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_btn_icon.svg" />
+                        <h id="like" >Like.</h>
+                    </div>
+                    <div class="likebox2">
+                        <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_btn_icon.svg" />
+                        <h id="comment">Comment</h>
+                    </div>
+                </div>
+                <div class="commentinput" id="commentinput">
+                    <input style="padding: 20px;margin-left: 150px;" type="text" id="commentInputText"/>
+                    <button id="commentthis">C O M M E N T</button>
+                </div>
+                <div class="commentsec_box" id="commentsec_box" >
+                        
+                </div>
+                
+            </div>
+
+            <!-- ------------------------------------------------------------ -->
+            <div class="feedbox" id="feedbox">
+                <h2 style="text-align: center;">Trending</h2>
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_filter.svg" />
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_add_user.svg" />
+                <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
+                <p style="margin-top: 40px;">Manish<br>
+                    <h>1 hour ago</h>
+                </p>
+                <p style="color: black;padding-left: 50px;padding-right: 50px;padding-top: 20px;">learning javascript</p>
+                <img class="feedbox_postimg"
+                    src="https://wallup.net/wp-content/uploads/2018/09/25/617724-JavaScript-minimalism.jpg" />
+                <div class="commentbox">
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_icon.svg" />
+                    <h id="likecount">0</h>
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_icon.svg" />
+                    <h id="commentcount">0</h>
+                    <div  class="likebox" >
+                        <img  src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_btn_icon.svg" />
+                        <h id="like" >Like.</h>
+                    </div>
+                    <div class="likebox2">
+                        <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_btn_icon.svg" />
+                        <h id="comment">Comment</h>
+                    </div>
+                </div>
+                <div class="commentinput" id="commentinput">
+                    <input style="padding: 20px;margin-left: 150px;" type="text" id="commentInputText"/>
+                    <button id="commentthis">C O M M E N T</button>
+                </div>
+                <div class="commentsec_box" id="commentsec_box" >
+                        
+                </div>
+                
+            </div>
+
+        </div>
+        <!-- ///////////////////feed box start ends /////////////////////////////-->
+         <!-- ///////////////////feed box start /////////////////////////////-->
+         <div id="popular_display" style="display: none;">
+            <div class="feedbox" id="feedbox">
+                <h2 style="text-align: center;">Popular</h2>
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_filter.svg" />
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_add_user.svg" />
+                <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
+                <p style="margin-top: 40px;">Rabia<br>
+                    <h>30 minutes ago</h>
+                </p>
+                <p style="color: black;padding-left: 50px;padding-right: 50px;padding-top: 20px;">We’re in the midst of
+                    a snow/sleet storm. So, yes, I’m ready for summer!</p>
+                <img class="feedbox_postimg"
+                    src="https://wallpapercave.com/wp/wp2465899.jpg" />
+                <div class="commentbox">
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_icon.svg" />
+                    <h id="likecount">0</h>
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_icon.svg" />
+                    <h id="commentcount">0</h>
+                    <div  class="likebox" >
+                        <img  src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_btn_icon.svg" />
+                        <h id="like" >Like.</h>
+                    </div>
+                    <div class="likebox2">
+                        <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_btn_icon.svg" />
+                        <h id="comment">Comment</h>
+                    </div>
+                </div>
+                <div class="commentinput" id="commentinput">
+                    <input style="padding: 20px;margin-left: 150px;" type="text" id="commentInputText"/>
+                    <button id="commentthis">C O M M E N T</button>
+                </div>
+                <div class="commentsec_box" id="commentsec_box" >
+                        
+                </div>
+                
+            </div>
+
+            <!-- ------------------------------------------------------------ -->
+            <div class="feedbox" id="feedbox">
+                <h2 style="text-align: center;">Popular</h2>
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_filter.svg" />
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_add_user.svg" />
+                <img src="https://www.sparkpeople.com/assets/diet5/cgf_user_noprofile.png" />
+                <p style="margin-top: 40px;">Ranjith<br>
+                    <h>1 hour ago</h>
+                </p>
+                <p style="color: black;padding-left: 50px;padding-right: 50px;padding-top: 20px;">learning javascript</p>
+                <img class="feedbox_postimg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Abs_2RpXb4EKVGSEuxIdosEEDKAH32a4Ig&usqp=CAU" />
+                <div class="commentbox">
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_icon.svg" />
+                    <h id="likecount">0</h>
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_icon.svg" />
+                    <h id="commentcount">0</h>
+                    <div  class="likebox" >
+                        <img  src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_like_btn_icon.svg" />
+                        <h id="like" >Like.</h>
+                    </div>
+                    <div class="likebox2">
+                        <img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet5/cgf_comment_btn_icon.svg" />
+                        <h id="comment">Comment</h>
+                    </div>
+                </div>
+                <div class="commentinput" id="commentinput">
+                    <input style="padding: 20px;margin-left: 150px;" type="text" id="commentInputText"/>
+                    <button id="commentthis">C O M M E N T</button>
+                </div>
+                <div class="commentsec_box" id="commentsec_box" >
+                        
+                </div>
+                
+            </div>
+
+        </div>
         <!-- ///////////////////feed box start ends /////////////////////////////-->
     </div>
 
