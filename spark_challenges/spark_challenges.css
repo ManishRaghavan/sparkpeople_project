@@ -1,0 +1,344 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+    background-color: #f5f5f5; 
+}
+.header{
+    background-color: white;
+    height: 120px;
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+    border-bottom: 5px solid #22a7ee;
+}
+
+.header__nav{
+    max-width: 1040px;
+    margin: auto;
+    position: relative;
+}
+.header_nav_a{
+    position: relative;
+}
+.header__nav__logo a img{
+    width: 300px;
+    margin: 8px 0px 3px 20px;
+}
+.header__nav__logo_tagline{
+    position: absolute;
+    bottom: -2px;
+    right: 0px;
+    color: #999;
+    font-size: 12px;
+    width: 120px;
+}
+.header_nav_dropdown_head{
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+.header_nav_dropdown_head li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 20px;
+    padding: 0.75em 0.9em;
+    display: block;
+}
+.header_nav_dropdown_head li a:hover{
+    color: #666;
+    background-color: #f8f8f8;
+    position: relative;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+}
+
+.dropdown_subelements{
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d5d5d5;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    left: auto;
+    padding: 0;
+}
+.dropdown_subelements li{
+    text-align: left;
+    list-style: none;
+    width: 250px;
+    color: #333;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 8px 8px 8px 8px;
+}
+.dropdown_subelements li:hover{
+    border-left: 3px solid #22a7ee;
+    background-color: #f8f8f8;
+}
+.header_nav_dropdown_head li:hover .dropdown_subelements{
+    display: block;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.header_nav_dropdown_head li a:hover{
+    border-top: 3px solid #22a7ee;
+}
+#no_effect a:hover{
+    color: #666;
+    background-color: #f8f8f8;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+/* .header__social__facebook{
+    background-image: url(https://sparkpeo.hs.llnwd.net/e1/assets/resource/facebook_color.svg);
+    width: 32px;
+} */
+.header__social{
+    position: absolute;
+    right: 0;
+    /* top: -2px; */
+    top: 85px;
+    display: flex;
+    overflow: hidden;
+}
+.header__social img{
+    display: block;
+    padding: 0px 8px;
+}
+
+.header__social__search{
+    display: block;
+    position: relative;
+    /* z-index: 1; */
+}
+.header__social__search_input {
+    /* background-color: #22a7ee; */
+    border: 0;
+    font-size: 18px;
+    /* padding: 15px; */
+    height: 22px;
+    width: 18px;
+    transition: width 0.3s ease;
+    /* position: relative; */
+    /* z-index: 900; */
+}
+.header__social__search_btn {
+    /* background-color: #22a7ee; */
+    color: #22a7ee;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 22px;
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+.header__social__search_btn:hover{
+    background-color: #22a7ee;
+    color: #fff;
+}
+.header__social__search_btn:focus,
+.header__social__search_input:focus {
+  outline: none;
+}
+.header__social__search.active .header__social__search_input {
+    /* position: relative; */
+    width: 80px;
+    /* z-index: 900; */
+}
+
+.header__social__search.active .header__social__search_btn {
+    transform: translateX(0px);
+}
+
+.header__social__search.active #social_active{
+    display: none !important;
+    /* z-index: -2; */
+}
+
+.nav_btns{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #6384BD;
+}
+.nav_btns_help{
+    list-style: none;
+    display: flex;
+}
+.nav_btns_help li{
+    padding: 2px 6px 2px 6px;
+    color: #6384BD;
+    font-size: 13px;
+    border-right: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.nav_btns_submenu {
+    display: none;
+    list-style: none;
+}
+.nav_btns_hover{
+    position: relative;
+}
+.nav_btns_hover:hover .nav_btns_submenu{
+    color: #3B5EE5;
+    padding: 10px;
+    background-color: #f5f5fe;
+    font-size: 13px;
+    display: block;
+    position: absolute;
+    width: 150px;
+    box-shadow: 2px 1px 6px #444;
+}
+.nav_btns_submenu li{
+    border-right: none;
+}
+.challenges_body {
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(236, 235, 235);
+    margin-top: 0px;
+}
+.challenges_top {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 18%
+}
+.challenges_heading >p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+.challenges_heading > h1 {
+    line-height: 1cm;
+    margin-bottom: 0px;
+    color:rgb(56, 56, 56);
+}
+.challenges_spam {
+    color: rgb(67, 67, 255);
+    text-decoration: underline;
+}
+.challenges_spam:hover {
+    color: #22a7ee;
+}
+.my_challenges {
+    height: 80px;
+    width: 250px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.my_challenges > h3 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+.my_challenges > p {
+    color: rgb(67, 67, 255);
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.challenges_img_flex {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 18%;
+}
+.challenges_lower {
+    height: 380px;
+    width: 250px;
+    /* background-color: peachpuff;
+    border: 1px solid black; */
+    text-align: center;
+}
+.challenges_lower_2 {
+    margin-left: 20px;
+}
+.challenges_img {
+    height: 240px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+.challenges_img:hover {
+    transform: scale(1.2);
+}
+.challenges_img_text {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 17px;
+}
+.challenges_create {
+    height: 40px;
+    width: 80px;
+    color: rgb(231, 231, 231);
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(81, 81, 253);
+    border: 1px solid rgb(81, 81, 253);
+    border-radius: 3px;
+}
+.challenges_create:hover {
+    background-color: rgb(76, 76, 211);
+    transform: scale(1.1)
+}
+.challenges_info {
+    height: 40px;
+    width: 50px;
+    font-size: 15px;
+    border: 1px solid rgb(206, 206, 206);
+}
+.challenges_info:hover {
+    box-shadow: 2px 2px 2px 2px rgb(172, 172, 172);
+    transform: scale(1.1)
+}
+.footer_center {
+    margin-top: 30px;
+    /* height: 300px; */
+    width: 1300;
+    /* background-color: rgb(233, 233, 233); */
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+.footer_line1 {
+    margin-left: 20%;
+    margin-bottom: 0px;
+}
+.footer_line2 {
+    margin-left: 17%;
+    margin-top: 0px;
+}
+.footer > p {
+    font-size: 12px;
+    line-height: 0cm;
+    color:rgb(71, 71, 71);
+}
+.footer > p:hover {
+    color: rgb(93, 130, 241);
+    text-decoration: underline;
+}
+.vertical_line {
+    height: 15px;
+    width: 1px;
+    background-color: rgb(90, 89, 89);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.footer_line3 {
+    margin-left: 30%;
+    margin-top: 10px;
+}
+.footer_line4,
+.footer_last_line {
+    font-size: 13px;
+    color:rgb(71, 71, 71);
+    text-align: center;
+}
