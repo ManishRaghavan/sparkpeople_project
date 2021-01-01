@@ -1,0 +1,423 @@
+.othergoals{
+    position: relative;
+    width: 1000px;
+    background-color: #f4f5f7;
+    font-family: arial, verdana, sans-serif;
+    margin: auto;
+}
+.othergoal{
+    padding: 10px 15px 15px 15px;
+}
+.othergoal__header h1{
+    color: #3f3f3f;
+    font-size: 35px;
+    margin: 0px 0px 2px 8px;
+}
+.othergoals_date{
+    padding: 15px;
+}
+.othergoals_date button{
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+}
+.date_leftArrow, .date_rightArrow, .calender_symbol{
+    line-height: 900;
+    width: 17px;
+    height: 32px;
+    padding: 0;
+    background-size: 108%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
+    background-color: transparent;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+}
+.date_rightArrow{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
+    background-size: 100%;
+}
+.date_show{
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    margin: 0 1em;
+    max-width: 22em;
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.calender_symbol{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
+    width: 32px;
+    background-size: 100%;
+    margin-right: 0.8em;
+}
+.othergoals__space{
+    height: 100px;
+    width: 300px;
+    /* margin: auto; */
+}
+.othergoals__trackers{
+    width: 958px;
+    border: 1px solid #b6bbe6;
+    box-shadow: 0px 0px 6px #ccc;
+    margin: 0px 8px 15px 10px;
+}
+.othergoals__trackers{
+    box-sizing: border-box;
+    background-color: rgb(215, 215, 249);
+    /* position: relative; */
+}
+.heading, 
+.tracker_othergoal,
+.fb_goals{
+    background-color: #f5f5fe;
+    display: flex;
+    
+}
+.tracker_othergoal{
+    border-top: 1px solid #d7d7f9;
+}
+.heading_header, 
+.tracker_othergoal_header,
+.fb_goals_header{
+    text-align: left;
+    /* position: absolute; */
+    width: 100%;
+    background-color: #f5f5fe;
+    height: 25px;
+    padding: 4px;
+    font: 20px Arial, Times;
+    vertical-align: middle;
+    margin: 0 0 4px;
+    font-weight: 600;
+    /* border-top: 1px solid #d7d7f9; */
+        
+}
+.heading_button, 
+.tracker_othergoal_btn,
+.fb_goals_btn{
+    text-align: right;
+    /* position: absolute; */
+    width: 100%;
+    padding: 8px 4px 0px;
+    height: 25px;
+    vertical-align: middle;
+}
+.heading_button button, 
+.tracker_othergoal_btn button,
+.fb_goals_btn button{
+    /* padding-top: 4px; */
+    background-color: #009f9f;
+    color: white;
+    border: 1px solid #009f9f;
+    font-weight: 600;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+}
+.heading_button button:hover,
+.tracker_othergoal_btn button:hover,
+.fb_goals_btn button:hover{
+    opacity: 0.9;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.6s;
+}
+.heading_button button:active,
+.heading_button button:focus,
+.tracker_othergoal_btn button:active,
+.tracker_othergoal_btn button:focus,
+.fb_goals_btn button:active,
+.fb_goals_btn button:focus{
+    border: none;
+}
+.othergoals_days{
+    display: flex;
+    /* padding: 4px; */
+}
+
+.othergoals_days_day{
+    font-size: 12px;
+    padding: 8px 10px;
+    border: 1px solid #d7d7f9;
+    text-align: center;
+    background-color: #eaeafd;
+    width: 25px;
+}
+.day1_gap{
+    padding-right: 600px;
+    /* display: flex;
+    background-color: white; */
+}
+.othergoals_report{
+    display: flex;
+    background-color: #fff;
+    position: relative;
+}
+.othergoals_report_button{
+    padding: 4px;
+    border: 1px solid #d7d7f9;
+    vertical-align: middle;
+}
+.othergoals_report_button button{
+    font-size: 10px;
+    background-color: #f1f1f1;
+    color: #0080c4;
+    border: #f1f1f1;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    padding: 0.45em 0.8em 0.45em;
+}
+.othergoals_report_button button:active,
+.othergoals_report_button button:focus{
+    border: none;
+}
+.othergoals_report_button button:hover{
+    color: #22a7ee;
+}
+.othergoals_info{
+    border-right: none;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 20px;
+    /* border-bottom: 1px solid #d7d7f9; */
+}
+.othergoals_track{
+    position: relative;
+    right: -330px;
+    top: 30%;
+    text-align: right;
+    cursor: pointer;
+    padding-left: 10px;
+    /* border: 1px solid red; */
+    border-left: 1px solid #d7d7f9;
+    /* border-bottom: 1px solid #d7d7f9; */
+    margin: 0px 10px 0px 0px;
+}
+.customgoal, .nutrition{
+    display: flex;
+}
+.othergoals_track img, .othergoals_track p{
+    margin: 5.5px;
+}
+#report_day6{
+    margin-right: 5px;
+}
+
+.customgoal div, 
+.nutrition div{
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 10px;
+    border: 1px solid #d7d7f9;
+    text-align: center;
+    background-color: rgb(234, 234, 253);
+}
+.customgoal_space, .nutrition_space{
+    text-align: left;
+    width: 650px;
+}
+.customgoal__info, .nutrition_info{
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #d7d7f9;
+    vertical-align: middle;
+    /* width: 250px; */
+}
+
+.healthy_food{
+    display: flex;
+}
+
+.healthy_food{
+    background-color: white;
+}
+.healthy_food_info{
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 279.5px;
+    border-bottom: 1px solid #d7d7f9;
+}
+.healthyFood_day{
+    font-size: 12px;
+    padding: 8px 10px;
+    border: 1px solid #d7d7f9;
+    text-align: center;
+    /* background-color: #eaeafd; */
+    width: 25px;
+}
+.healthyFood_day input{
+    margin: 0; 
+    padding: 0;
+}
+
+/* Popup CSS */
+.model{
+    background-color: #fff;
+    display: none;
+    z-index: 100000;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    transition: display, 1s;
+    /* margin: auto; */
+}
+.model_content{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    padding: 30px 60px;
+}
+.model_content_header h1{
+    margin: 0 auto 5px auto;
+    padding: 0;
+    font-size: 20px;
+}
+.model_content_header p{
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+}
+.model_content_tasks {
+    border: 1px solid #c0c0f5;
+    border-radius: 5px;
+    display: block;
+    width: 410px;
+}
+.model_content_task {
+    padding: 4%;
+}
+.model_content_task h1{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+#goal_sleep, #goal_info{
+    width: 6em;
+    border: 1px solid #dddddd;
+}
+#goal_sleep:active, #goal_info:active{
+    outline: none;
+}
+#goal_sleep:focus, #goal_info:focus{
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    margin: 5px 1px 5px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    outline: none;
+}
+
+.model_content_task p{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: bold;
+}
+.model_content_task p span{
+    font-size: 11px;
+    color: #666;
+    font-weight: 300;
+}
+.goal_buttons{
+    margin-top: 10px;
+}
+.goal_buttons .blue{
+    color: white;
+    background-color: #1095dc;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.6em 1em 0.6em;
+    border: 1px solid #1095dc;
+}
+.goal_buttons .blue:hover{
+    opacity: 0.9;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.6s;
+}
+
+.goal_buttons .white{
+    color: #0080c4;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0.6em 1em 0.6em;
+    border: 1px solid #f1f1f1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+.goal_buttons .white:hover{
+    opacity: 0.9;
+    box-shadow: none;
+    /* transition: box-shadow 0.6s; */
+    color: #22a7ee;
+}
+
+.fastBreak_model{
+    background-color: #fff;
+    display: none;
+    z-index: 100000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    transition: display, 1s;
+    /* margin: auto; */
+}
+
+.fastBreak_content{
+    width: 750px;
+    height: 500px;
+    background-color: white;
+    margin: auto;
+    padding: 30px 60px;
+}
+
+.fastBreak_header h2{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.fastBreak_inputs{
+    /* background-color: #efefef; */
+    /* padding: 10px; */
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 0px 6px #efefef;
+    margin-bottom: 5px;
+}
+
+.inputs_header{
+    background-color: #01a0a0;
+    padding: 2px 0px 2px 5px;
+    /* font-size: 16px; */
+}
+
+.inputs_header h2{
+    color: white;
+    margin: 0px;
+}
+
+.fastBreak_btn{
+    background-color: #01a0a0;
+    border: 1px solid #01a0a0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.fastBreak_inputs_info p, .fastBreak_inputs_info input{
+    font-size: 13px;
+}

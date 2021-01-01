@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./goals.css">
+    <title>SparkPeople: Other Goals | SparkPeople</title>
+    <link rel = "icon" href = "../resources/logo.png" 
+        type = "image/x-icon"> 
+</head>
+<body>
+    <div class="othergoals">
+        <div class="othergoal">
+            <div class="othergoal__header">
+                <h1>Other Goals</h1>
+            </div>
+            <div class="othergoals_calender">
+                <div class="othergoals_date">
+                    <button class="date_leftArrow"></button>
+                    <button class="date_show">Sunday - Saturday, December 27 - January 2</button>
+                    <button class="calender_symbol"></button>
+                    <button class="date_rightArrow"></button>
+                </div>
+                <div class="othergoals__space"></div>
+            </div>
+            <div class="othergoals__trackers">
+                <div class="othergoals_tracker">
+                    <div class="heading">
+                        <div class="heading_header">SparkPeople Special Goals</div>
+                        <div class="heading_button"><button>Add/Remove Special Goals</button></div>
+                    </div>
+                    <div class="othergoals_days">
+                        <div class="othergoals_days_day day1_gap">&nbsp</div>
+                        <div class="othergoals_days_day">SUN</div>
+                        <div class="othergoals_days_day">MON</div>
+                        <div class="othergoals_days_day">TUE</div>
+                        <div class="othergoals_days_day">WED</div>
+                        <div class="othergoals_days_day">THU</div>
+                        <div class="othergoals_days_day">FRI</div>
+                        <div class="othergoals_days_day">SAT</div>
+                    </div>
+                    <div class="othergoals_report">
+                        <div class="othergoals_report_button"><button>See Report</button></div>
+                        <div class="othergoals_info">Get 8 hours of sleep per day</div>
+                        <div class="othergoals_track" id="report_day1"onclick="showGoals_model(this)"><p style="margin: 0; padding: 0px 3px; display: none">0</p><img style="display: block;" src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                        <div class="othergoals_track" id="report_day2"onclick="showGoals_model(this)"><img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                        <div class="othergoals_track" id="report_day3"onclick="showGoals_model(this)"><img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                        <div class="othergoals_track" id="report_day4"onclick="showGoals_model(this)"><img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                        <div class="othergoals_track" id="report_day5"onclick="showGoals_model(this)"><img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                        <div class="othergoals_track" id="report_day6"onclick="showGoals_model(this)"><p id="sleephrs_show" style="display: none; padding: 0px 3px;"></p><img id="sleephrs_img" src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                        <div class="othergoals_track" id="report_day7"><img src="https://sparkpeo.hs.llnwd.net/e1/assets/diet3/nu-plus.gif" alt="day_image"></div>
+                    </div>
+                    <div class="tracker_othergoal">
+                        <div class="tracker_othergoal_header">Other Goals</div>
+                        <div class="tracker_othergoal_btn">
+                            <button>Add/Remove Other Goals</button>
+                        </div>
+                    </div>
+                    <div class="customgoal">
+                        <div class="customgoal_space"></div>
+                        <div class="customgoal__info">Set your own completely custom goal</div>
+                    </div>
+                    <div class="fb_goals">
+                        <div class="fb_goals_header">Fast Break Goals</div>
+                        <div class="fb_goals_btn" onclick="showFastBreak_model()"><button>Add/Remove Fast Break Goals</button></div>
+                    </div>
+                    <div class="nutrition" id="fastbreak_goals_static" style="display: flex;">
+                        <div class="nutrition_space" id="nutrition_space"></div>
+                        <!-- <div>sun</div> -->
+                        <div class="nutrition_info">Select from our list of nutrition, motivation, and fitness Fast Break Goals</div>
+                        
+                    </div>
+                    <div class="othergoals_days" id="healthy_food_header" style="display: none;">
+                        <div class="othergoals_days_day day1_gap">&nbsp</div>
+                        <div class="othergoals_days_day">SUN</div>
+                        <div class="othergoals_days_day">MON</div>
+                        <div class="othergoals_days_day">TUE</div>
+                        <div class="othergoals_days_day">WED</div>
+                        <div class="othergoals_days_day">THU</div>
+                        <div class="othergoals_days_day">FRI</div>
+                        <div class="othergoals_days_day">SAT</div>
+                    </div>
+                    <div class="healthy_food" id="healthy_food" style="display: none";>
+                        <div class="othergoals_report_button"><button>See Report</button></div>
+                        <div class="healthy_food_info">Eat a Healthy breakfast : 1x / day <span>info</span></div>
+                        <div class="othergoals_days">
+                            <!-- <div class="day1_gap">
+                                <div class="othergoals_report_button"><button>See Report</button></div>
+                                <div>Eat a Healthy breakfast : 1x / day <span>info</span></div>
+                            </div> -->
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                        </div>
+                    </div>
+                    <div class="healthy_food" id="walk_day" style="display: none;">
+                        <div class="othergoals_report_button"><button>See Report</button></div>
+                        <div class="healthy_food_info" style="padding-right: 282px;">	Go for a walk each day : 1x  /  day <span> info </span></div>
+                        <div class="othergoals_days">
+                            <!-- <div class="day1_gap">
+                                <div class="othergoals_report_button"><button>See Report</button></div>
+                                <div>Eat a Healthy breakfast : 1x / day <span>info</span></div>
+                            </div> -->
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                            <div class="healthyFood_day"><input type="checkbox"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop Up code -->
+
+    <div id="goals_model" class="model">
+        <div class="model_content">
+            <div class="model_content_header">
+                <h1>Track Special Goal</h1>
+                <p>Date You Are Tracking: Sunday, December 27, 2020</p>
+            </div>
+            <div class="model_content_tasks" id="model_content_tasks">
+                <div class="model_content_task">
+                    <h1>Get 8 hours of sleep per day</h1>
+                    <p>How much?</p>
+                    <input type="number" id="goal_sleep" size="6" maxlength="7">
+                    <p>optional Comments: <span>(show to your SparkTeams)</span></p>
+                    <textarea name="comments" id="goal_info" cols="50" rows="3"></textarea>
+                    <div class="goal_buttons">
+                        <button class="blue" id="savechanges" onclick="saveGoals_model()">Save Changes</button>
+                        <button class="white" id="model_close" onclick="closeGoals_model()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fastBreak_model" class="fastBreak_model">
+        <!-- Modal content -->
+        <div class="fastBreak_content">
+            <div class="fastBreak_header">
+                <h2>Change What You Measure</h2>
+                <p>To start your program off right, we recommend setting small goals to build momentum. 
+                    Don't feel like you have to dramatically change all of your habits overnight, since slow and steady is the best way to do it! 
+                    That's why the Fast Break stage (picking a few small goals to focus on for the first two weeks of your program) is so important. 
+                    <strong>To get started, choose 1 Fast Break goals from the list below (one from each area). </strong>
+                    These are things you should try to do every day for the next two weeks.
+                </p>
+            </div>
+            <div class="fastBreak_inputs">
+                <div class="inputs_header">
+                    <h2>Nutrition</h2>
+                </div>
+                <div class="fastBreak_inputs_info">
+                    <div>
+                        <input type="checkbox" id="healthy_food_check">
+                        <p style="display: inline-block;">Eat a healthy breakfast</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="soda_check">
+                        <p style="display: inline-block;">Don’t drink soda</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="lunch_check">
+                        <p style="display: inline-block;">Pack your lunch 3 times each week</p>
+                    </div>                
+                </div>
+                <div class="inputs_header">
+                    <h2>Fitness</h2>
+                </div>
+                <div class="fastBreak_inputs_info">
+                    <div>
+                        <input type="checkbox" id="exercise_check">
+                        <p style="display: inline-block;">Exercise for 10 minutes each day</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="walk_check">
+                        <p style="display: inline-block;">Go for a walk each day</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="dog_check">
+                        <p style="display: inline-block;">Walk the dog each day</p>
+                    </div>                
+                </div>
+            </div>
+            <button class="fastBreak_btn" id="fastBreak_btn_save" onclick="display_fastFood()">Save Changes</button>
+            <button class="fastBreak_btn" id="fastBreak_btn_close" onclick="fastBreak_close()">Close</button>
+        </div>
+      
+    </div>
+    <script src="./goals.js"></script>
+</body>
+</html>
