@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login_page.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header__nav">
+            <div class="header__nav__logo">
+                <a href="#" class="header_nav_a">
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/sparkpeople_logo.svg"
+                        alt="sparkpeople_logo">
+                    <span class="header__nav__logo_tagline">Live Healthy & Happy</span>
+                </a>
+            </div>
+            <div class="header_nav_dropdown">
+                <ul class="header_nav_dropdown_head">
+                    <li id="no_effect"><a href="#">START</a></li>
+                    <li><a href="#">MY TRACKERS</a>
+                        <ul class="dropdown_subelements">
+                            <li>Start</li>
+                            <li>my Nutrition</li>
+                            <li>My Fitness</li>
+                            <li>My Weight</li>
+                            <li>Other Goals</li>
+                            <li>SparkStreks</li>
+                            <li>Reports</li>
+                            <li>SparkMail</li>
+                            <li>My SparkPoints</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <ul class="dropdown_subelements">
+                            <li>Community Home</li>
+                            <li>Community Feed</li>
+                            <li>Message Boards</li>
+                            <li>SparkTeams</li>
+                            <li>Challenge Central</li>
+                            <li>SparkPages</li>
+                            <li>Member Blogs</li>
+                            <li>SparkStories</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">LEARN</a>
+                        <ul class="dropdown_subelements">
+                            <li>What's New</li>
+                            <li>The SparkPeople 28 Day Program</li>
+                            <li>Nutrition</li>
+                            <li>Fitness</li>
+                            <li>Motivation</li>
+                            <li>Health & Wellness</li>
+                            <li>Weight Loss</li>
+                            <li>Fitness Videos</li>
+                            <li>Health Family</li>
+                            <li>Pregnancy & Postpartum</li>
+                            <li>Instant Inspiration</li>
+                            <li>Lifestyle Centers</li>
+                            <li>The SparkPeople Blog</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CHALLENGES</a>
+                        <ul class="dropdown_subelements">
+                            <li>Spark Challenges</li>
+                            <li>Calender Challenges</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SHOP</a>
+                        <ul class="dropdown_subelements">
+                            <li>Kitchen</li>
+                            <li>Food</li>
+                            <li>Fitness & Apparel</li>
+                            <li>Music</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">RECIPES</a></li>
+                </ul>
+            </div>
+            <div class="header__social">
+                <!-- <div class="header__social__facebook"></div> -->
+                <!-- <div id="social_logo" class="social_logo"> -->
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/facebook_color.svg" alt="facebook"
+                    width="22px" id="social_active">
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/pinterest_color.svg" alt="pinterest_color"
+                    width="22px" id="social_active">
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/instagram.svg" alt="instagram" width="22px"
+                    id="social_active">
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_apps.svg" alt="instagram" width="50px"
+                    id="social_active">
+                <!-- </div> -->
+                <!-- <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_search_expand.svg" alt="search" width="-32px"> -->
+                <div class="header__social__search" id="header__social__search">
+
+                    <!-- <button id="header__social__search_btn" class="header__social__search_btn"> -->
+                    
+                    </button>
+                </div>
+            </div>
+            <div class="nav_btns">
+                <ul class="nav_btns_help">
+                    <li>Help</li>
+                    <li class="nav_btns_hover">RANJITHKUMARK8 <img
+                            src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_blue_arrow_down.svg">
+                        <ul class="nav_btns_submenu">
+                            <li>Account/E-Mail Preferences</li>
+                            <li>Log Out</li>
+                        </ul>
+                    </li>
+                    <li>36 Points</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p class="require_login">The page you are trying to reach requires you to log in</p>
+    <div class="login_container">
+        <div class="upper_half">
+            <h3>Already a Member? <spam>-Log in Here</spam></h3>
+            <div class="username">
+                <p>Username:</p>
+                <input type="text" class="username_input"/>
+            </div>
+            <div class="username">
+                <p>Password:</p>
+                <input type="text" class="password_input"/>
+            </div>
+            <div class="checkbox_flex">
+                <form class="checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="checkbox" class="remember_text">Remember me</label>
+                    <p class="forgot_password">Forgot Your Password</p>
+                </form>
+                <button class="login_button">Log in Now</button>
+            </div>
+        </div>
+        <div class="lower_half">
+            <button class="facebook_login">
+                <img height="20px" width="20px" src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/facebook_color.svg"/>
+                <!-- <div class="line"></div> -->
+                Log in With Facebook
+            </button>
+            <div class="hor_line"></div>
+            <h3>Log password? Hard to type?</h3>
+            <p class="magic_text">We can email you a magic link so you can sign in without having to type your password.</p>
+            <button class="magic_button">Send Magic Link</button>
+        </div>
+    </div>
+    <div class="login_bottom">
+        <h4 class="login_member">Not a Member Yet?</h4>
+        <p class="member_info">Join now, it is quite, easy and FREE.<br>Get access to our entire program, including:</p>
+        <div class="extra_benefits">
+            <ul class="extra_list">
+                <li>Food tracker and personalized meal plans</li>
+                <li>Customized fitness plan</li>
+                <li>SparkPoints motivation program</li>
+                <li>Support from our experts on message boards</li>
+                <li>Articles, recipes, tips, and much more!</li>
+            </ul>
+        </div>
+        <button class="login_signup">Sign up for FREE</button>
+        <p class="disclaimer">By clicking one of the above buttons, you're indicating that you have read and agree to SparkPeople's <span class="disclaimer_tc">Terms and Conditions</span> and <span class="disclaimer_tc">Privacy Policy</span> and that you're at least 18 years of age.</p>
+    </div>
+    <script src="./header.js"></script>
+</body>
+</html>
