@@ -500,3 +500,12 @@ body{
   {
       display:none;
   }
+
+  .trending_box
+  {
+    height: 500px;
+    width: 1000px;
+    color: rgb(224, 8, 8);
+    float: left;
+    margin-left: 500px;
+  }
