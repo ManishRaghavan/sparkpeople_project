@@ -11,7 +11,6 @@ body{
     border-bottom: 5px solid #22a7ee;
 }
 
-
 .header__nav{
     max-width: 1040px;
     margin: auto;
@@ -242,8 +241,154 @@ body{
     width: 32px;
     background-size: 100%;
     margin-right: 0.8em;
-.line_break{
-    height: 5px;
+}
+
+/* ------------------------------------main box------------------------------ */
+
+.mainbox
+{
+    height: 1800px;
+    width:900px;
+    margin: auto;
+}
+.optionselector
+{
+    height: 50px;
+    width: 800px;
+    margin-left: 20px;
+    border-radius: 15px 15px 0 0 ;
+    border: 1px solid #cccccc;
+    display: flex;
+    flex-direction: row;
+}
+.searchbox{
+    height: 40px;
+    width:150px;
     background-color: #22a7ee;
+    border-radius: 15px 15px 0 0 ;
+    margin:10px ;
+    color: #fff;
+    font-size: 13px;
+}
+.searchbox:hover
+{
+    background-color: #fff;
+    color: black;
+}
+.inputbox
+{
+    height: 80px;
+    width: 800px;
+    margin-left:20px ;
+    border: 1px solid #cccccc;
+}
+.search{
+    height: 30px;
+    width: 100px;
+    background-color: #009f9f;
+    float: left;
+    margin: 10px;
+    border-radius: 5px;
+}
+.search:hover{
+    background-color: #01c4c4;
+}
+.search2{
+    height: 50px;
+    width: 200px;
+    background-color: #009f9f;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+.search2:hover{
+    background-color: #01c4c4;
+}
+.search2>h3{
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+    }
+.search>h3{
+text-align: center;
+margin-top: 5px;
+color: #fff;
+}
+.hiddenbox
+{
+    height: 400px;
+    width: 180x;
+    margin-left:20px ;
+    background-color: #f5f5fe;
+    border:1px solid #B5BAE6;
+    display: none;
+}
+.google
+{
+    height: 200px;
+    width: 180x;
+    margin-left:20px ;
+    overflow: scroll;
+    margin-top: 30px;
 
 }
+.googlebox1,.googlebox
+{
+    height: 30px;
+    width: 100%;
+    border-bottom:1px solid #B5BAE6;
+}
+.googlebox1:hover,.googlebox:hover{
+    background-color: #22a7ee;
+}
+
+/* table css */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 20px;
+    font-size: 12px;
+    border: 1px solid gray;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+    
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size:12px;
+    border:1px solid #d7d7f9;
+  }
+  
+  
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size:12px;
+    border:1px solid #d7d7f9;
+    text-align: center;
+  }
+  #food
+  {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    margin: 30px;
+  }
