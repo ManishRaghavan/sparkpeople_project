@@ -945,3 +945,11 @@ body{
 
 
 
+/* css of details in top */
+
+.details
+{
+    height: 150px;
+    width: 100%;
+    background-color: #e6e6e6;
+}
