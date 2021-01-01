@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = "../resources/logo.png" 
+    type = "image/x-icon"> 
     <title>login</title>
     <link rel="stylesheet" href="login_page.css">
 </head>
@@ -123,7 +125,7 @@
             </div>
             <div class="username">
                 <p>Password:</p>
-                <input type="text" id="userpassword_input" class="password_input"/>
+                <input type="password" id="userpassword_input" class="password_input"/>
             </div>
             <div class="checkbox_flex">
                 <form class="checkbox">
@@ -131,7 +133,7 @@
                     <label for="checkbox" class="remember_text">Remember me</label>
                     <p class="forgot_password">Forgot Your Password</p>
                 </form>
-                <button id="login_button" class="login_button">Log in Now</button>
+                <button id="login_button" class="login_button"><a href="/start_page/start_page.html" style="text-decoration: none;color: white;">Log in Now</a></button>
             </div>
         </div>
         <div class="lower_half">
@@ -182,7 +184,12 @@
            {
                console.log("yes2")
            }
-           else if(name !== data.user_name || password !== data.user_password)
+           if(name !== data.user_name )
+           {
+                alert("User name or Password is wrong \n"+ "Check Again")
+                console.log("name not matches")
+           }
+            if(password !== data.user_password )
            {
                 alert("User name or Password is wrong \n"+ "Check Again")
            }

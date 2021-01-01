@@ -11,6 +11,7 @@ body{
     border-bottom: 5px solid #22a7ee;
 }
 
+
 .header__nav{
     max-width: 1040px;
     margin: auto;
@@ -241,4 +242,8 @@ body{
     width: 32px;
     background-size: 100%;
     margin-right: 0.8em;
+.line_break{
+    height: 5px;
+    background-color: #22a7ee;
+
 }
