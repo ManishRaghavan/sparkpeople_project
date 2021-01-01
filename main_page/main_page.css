@@ -1,3 +1,6 @@
+body{
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+}
 .header {
     height: 80px;
     width: 100%;
@@ -118,6 +121,7 @@
     width: 200px;
     /* border: 1px solid black; */
     text-align: center;
+    margin-left: 10px;
 }
 .four_icons > img {
     height: 104px;
@@ -378,10 +382,10 @@
     padding-top: 20px;
 }
 .last_button {
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     background-color: rgb(48, 114, 236);
-    border-radius: 60px;
+    border-radius: 70px;
     border: 1px solid rgb(48, 114, 236);
     margin-left: 52%;
     margin-top: 50px;
@@ -461,4 +465,50 @@
 .icon_button:hover {
     border: 1px solid rgb(145, 143, 143);
     transform: scale(1.2);
+}
+
+.footer_center {
+    margin-top: 30px;
+    /* height: 300px; */
+    width: 1300;
+    /* background-color: rgb(233, 233, 233); */
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+.footer_line1 {
+    margin-left: 20%;
+    margin-bottom: 0px;
+}
+.footer_line2 {
+    margin-left: 17%;
+    margin-top: 0px;
+}
+.footer > p {
+    font-size: 12px;
+    line-height: 0cm;
+    color:rgb(71, 71, 71);
+}
+.footer > p:hover {
+    color: rgb(93, 130, 241);
+    text-decoration: underline;
+}
+.vertical_line {
+    height: 15px;
+    width: 1px;
+    background-color: rgb(90, 89, 89);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.footer_line3 {
+    margin-left: 30%;
+    margin-top: 10px;
+}
+.footer_line4,
+.footer_last_line {
+    font-size: 13px;
+    color:rgb(71, 71, 71);
+    text-align: center;
 }
