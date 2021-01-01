@@ -11,7 +11,6 @@ body{
     border-bottom: 5px solid #22a7ee;
 }
 
-
 .header__nav{
     max-width: 1040px;
     margin: auto;
@@ -201,49 +200,153 @@ body{
 .nav_btns_submenu li{
     border-right: none;
 }
-.othergoals_date{
-    padding: 15px;
+.shop_kitchen {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgb(235, 235, 235);
+    /* border: 1px solid rgb(197, 196, 196); */
 }
-.othergoals_date button{
-    font-family: helvetica, Arial, Helvetica, sans-serif;
+.shop_kitchen_heading {
+    text-align: center;
 }
-.date_leftArrow, .date_rightArrow, .calender_symbol{
-    line-height: 900;
-    width: 17px;
-    height: 32px;
-    padding: 0;
-    background-size: 108%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
-    background-color: transparent;
-    font-size: 16px;
-    display: inline-block;
-    border: none;
-    vertical-align: middle;
+.shop_kitchen_heading > h1 {
+    color: rgb(46, 45, 45);
+    margin-bottom: 0px;
+} 
+.shop_kitchen_heading > p {
+    color:rgb(124, 124, 124);
+    margin-top: 5px;
+    font-weight: bold;
 }
-.date_rightArrow{
-    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
-    background-size: 100%;
+.kitchen_skinny_img_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.date_show{
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    margin: 0 1em;
-    max-width: 22em;
-    border: none;
-    background-color: transparent;
-    vertical-align: middle;
+.kitchen_skinny_img {
+    height: 350px;
+    width: 300px;
+    background-color: rgb(255, 253, 253);
+    /* border: 1px solid green; */
+    text-align: center;
 }
-.calender_symbol{
-    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
-    width: 32px;
-    background-size: 100%;
-    margin-right: 0.8em;
-.line_break{
-    height: 5px;
-    background-color: #22a7ee;
-
+.kitchen_skinny_img > img {
+    height: 230px;
+    width: 300px;
+}
+.kitchen_skinny_img > p {
+    margin-top: 20px;
+    font-weight:  bold;
+}
+.kitchen_skinny_img:hover {
+    color: rgb(67, 67, 255);
+} 
+.kitchen_mixer {
+    height: 400px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 20px;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(204, 204, 204);
+    display: flex;
+    flex-direction: row;
+}
+.kitchen_mixer > img {
+    height: 400px;
+    width: 60%;
+}
+.kitchen_mixer_text {
+    height: 400px;
+    width: 40%;
+    margin-left: 20px;
+}
+.kitchen_mixer_text_featured {
+    color: green;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.kitchen_mixer_text > h2 {
+    margin-top: 40px;
+}
+.kitchen_mixer_text_2 {
+    margin-top: 40px;
+    line-height: 0.7cm;
+}
+h2 {
+    text-align: center;
+    color:rgb(37, 37, 37)
+}
+.kitchen_finds {
+    display: flex;
+    flex-direction: row;
+}
+.kitchen_finds_1 {
+    height: 250px;
+    width: 200px;
+    background-color: white;
+    /* border: 1px solid black; */
+    margin-left: 30px;
+}
+.kitchen_finds_1 > img {
+    width: 200px;
+}
+.kitchen_finds_1 > p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.kitchen_items6 {
+    display: flex;
+    flex-direction: row;
+}
+.kitchen_clean {
+    height: 300px;
+    width: 250px;
+    background-color: white;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.kitchen_clean > img {
+    width: 250px;
+}
+.kitchen_clean > p {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.kitchen_clean > p:hover {
+    color:rgb(28, 28, 250)
+}
+.more_kitchen_products {
+    margin-left: 15px;
+    font-weight: bold;
+}
+.kitchen_products_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.kitchen_products {
+    height: 250px;
+    width: 220px;
+    background-color: white;
+    border: 1px solid rgb(211, 211, 211);
+}
+.kitchen_products:hover {
+    opacity: 0.5
+}
+.kitchen_products > p {
+    font-size: 13px;
+    text-align: center;
+    color: rgb(28, 28, 250);
+}
+.kitchen_products >p:hover {
+    color: rgb(223, 145, 1);
+}
+.kitchen_products_flex2 {
+    margin-top: 10px;
 }

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./myWeight.css">
+    <title>SparkPeople: Weigh In | SparkPeople</title>
+    <link rel = "icon" href = "../resources/logo.png" 
+        type = "image/x-icon"> 
+</head>
+<body>
+    <div class="myweights">
+        <div class="myweight">
+            <div class="myweight_header">
+                <h1>Weigh-In</h1>
+                <h1 id="small">and Other Measurements</h1>
+            </div>
+            <div class="weightloss_Box">
+                <div class="weightloss_home">
+                    <div class="home_header">
+                        <h1><span id="weight_diff">0 Pounds Lost</span></h1>
+                        <p id="weight_info">Goal to go from 143 to 143 by 12/29/2021, Last weigh-in </p> <span id="last_weight">65</span> <span>KG</span>
+                        <button id="bmi_popUp" >Edit Weight Goal</button>
+                    </div>
+                </div>
+            </div>
+            <div class="othergoals_calender">
+                <div class="othergoals_date">
+                    <button class="date_leftArrow"></button>
+                    <button class="date_show">Friday, January 1</button>
+                    <button class="calender_symbol"></button>
+                    <button class="date_rightArrow"></button>
+                </div>
+            </div>
+            <div class="myweight_tracker_top">
+                <button class="myweight_tracker_top_green" onclick="storeFitnessData()">Save Measurements</button>
+                <button class="myweight_tracker_top_blue">View/Sync Wifi Devices</button>
+            </div>
+            <div class="myweight_tracker">
+                <div class="tracker_head">
+                    <div class="head1">MEASUREMENTS</div>
+                    <div class="head2">TODAY'S ENTRY</div>
+                    <div class="head1">LAST ENTRY</div>
+                    <div class="head1">RECOMMENDED</div>
+                </div>
+                <div class="tracker_head2">
+                    <div class="head2_subhead">Weights / Measurements</div>
+                    <div class="head2_buttons">
+                        <button>Info</button>
+                        <button>See Reports</button>
+                    </div>
+                </div>
+                <div class="weights_data">
+                    <div class="weights_data_head">
+                        <div>Weight yourself</div>
+                        <div>Measure your Waist</div>
+                        <div>Measure Your Hips</div>
+                        <div>Measure your Thigh</div>
+                        <div>Measure your Upper Arm</div>
+                    </div>
+                    <div class="weights_data_value">
+                        <div><input type="number" id="head2_weight" size="5"></div>
+                        <div><input type="number" id="head2_waist"size="5" ></div>
+                        <div><input type="number" id="head2_hips" size="5"></div>
+                        <div><input type="number" id="head2_thigh" size="5"></div>
+                        <div><input type="number" id="head2_upperArm" size="5"></div>
+                    </div>
+                    <div class="weights_data_Lentry">
+                        <div id="show_weight">&nbsp</div>
+                        <div id="show_waist">&nbsp</div>
+                        <div id= "show_hips">&nbsp</div>
+                        <div id="show_thigh">&nbsp</div>
+                        <div id="Show_upperArm">&nbsp</div>
+                    </div>
+                    <div class="weights_data_Recommend">
+                        <div>weekly</div>
+                        <div>Monthly</div>
+                        <div>Monthly</div>
+                        <div>Monthly</div>
+                        <div>Monthly</div>
+                    </div>
+                </div>
+                <div class="tracker_head2">
+                    <div class="head2_subhead">Wellness</div>
+                    <div class="head2_buttons">
+                        <button>Info</button>
+                        <button>See Reports</button>
+                    </div>
+                </div>
+                <div class="wellness_data">
+                    <div class="wellness_data_head">
+                        <div> Energy Level</div>
+                        <div> Stress Level</div>
+                        <div> Mood</div>
+                    </div>
+                    <div class="wellness_data_value">
+                        <select name="EnergyLevel" id="wellness_energy">
+                            <option value="" selected=""></option>
+                            <option value="5">5 (very high) </option>
+                            <option value="4">4 (high) </option>
+                            <option value="3">3 (moderate) </option>
+                            <option value="2">2 (low) </option>
+                            <option value="1">1 (very low) </option>
+                        </select>
+                        <select name="StressLevel" id="wellness_stress">
+                            <option value="" selected=""></option>
+                            <option value="5">5 (very high) </option>
+                            <option value="4">4 (high) </option>
+                            <option value="3">3 (moderate) </option>
+                            <option value="2">2 (low) </option>
+                            <option value="1">1 (very low) </option>
+                        </select>
+                        <select name="MoodLevel" id="wellness_mood">
+                            <option value="" selected=""></option>
+                            <option value="10">10 (very high) </option>
+                            <option value="9">9  </option>
+                            <option value="8">8 (high) </option>
+                            <option value="7">7 </option>
+                            <option value="6">6  </option>
+                            <option value="5">5 (moderate) </option>
+                            <option value="4">4</option>
+                            <option value="3">3 (low) </option>
+                            <option value="2">2  </option>
+                            <option value="1">1  (very low)</option>
+                        </select>
+                    </div>
+                    <div class="wellness_data_Lentry">
+                        <div id="show_energy">&nbsp</div>
+                        <div id="show_stress">&nbsp</div>
+                        <div id="show_mood">&nbsp</div>
+                    </div>
+                    <div class="wellness_data_recommend">
+                        <div>Daily</div>
+                        <div>Daily</div>
+                        <div>Daily</div>
+                    </div>
+                </div>
+                <div class="tracker_head2">
+                    <div class="head2_subhead">Fitness Tests</div>
+                    <div class="head2_buttons">
+                        <!-- <button id="fit_more">Add More</button> -->
+                        <button>Info</button>
+                        <button>See Reports</button>
+                    </div>
+                </div>
+                <div class="fitness_addons" id="pushups">
+                    <div class="pushups">
+                        <div class="pushups_content" style="padding-right: 80px;">pushUps</div>
+                        <input type="number" size="5" class="pushups_input" id="pushup_count">
+                        <div class="pushups_data" style="text-align: center;" id="show_pushups">&nbsp;</div>
+                        <div style="padding-left: 50px;" class="recommend">Monthly</div>
+                    </div>
+                </div>
+                <div class="fitness_addons" id="crunches">
+                    <div class="pushups">
+                        <div class="pushups_content" style="padding: 0px 78px;">Crunches</div>
+                        <input type="number" size="5" class="pushups_input" id="crunches_count">
+                        <div class="pushups_data" id="show_crunches">&nbsp;</div>
+                        <div class="recommend" style="padding-right: 50px;">Monthly</div>
+                    </div>
+                </div>
+                <div class="fitness_addons" id="stepTest">
+                    <div class="step">
+                        <div class="step_content" style="padding: 0px 48px; margin-right: 10px;">3-Minute Step Test </div>
+                        <input type="number" size="5" class="step_input" id="step_count">
+                        <div class="pushups_data" id="show_step" style="margin-left: 32px;">&nbsp;</div>
+                        <div class="recommend">Monthly</div>
+                    </div>
+                </div>
+                <div class="tracker_head2">
+                    <div class="head2_subhead">Health Measurements</div>
+                    <div class="head2_buttons">
+                        <!-- <button id="health_more">Add More</button> -->
+                        <button>Info</button>
+                        <button>See Reports</button>
+                    </div>
+                </div>
+                <div class="myweight_tracker_bottom">
+                    <button class="myweight_tracker_top_green" onclick="storeFitnessData()">Save Measurements</button>
+                </div>
+            </div>
+            <div class="myweight_footer">
+                <div class="myweight_footer_reports" style="margin-left: 15px;">
+                    <div class="reports_header">
+                        <img src="https://www.sparkpeople.com/assets/diet4/nt7_reports_h_bg.svg" alt="reports">
+                        <h1>Reports</h1>
+                    </div>
+                    <div class="reports1">Weight Over Time</div>
+                    <div class="reports1">Other Measurements Reports</div>
+                    <div class="reports1">Premium Data Export</div>
+                </div>
+                <div class="myweight_footer_tools">
+                    <div class="tools_header">
+                        <img src="https://www.sparkpeople.com/assets/diet4/nt7_tools_h_bg.svg" alt="tools">
+                        <h1>Tools & Settings</h1>
+                    </div>
+                    <div class="tools1" onclick="addon_measurements()" style="cursor: pointer;">Add/Change What You Measure</div>
+                    <div class="tools1">Printable Tape Measure</div>
+                    <div class="tools1">Join our Virtual Weigh-In SparkTeam</div>
+                </div>
+                <div class="myweight_footer_devices">
+                    <div class="devices_header">
+                        <img src="https://www.sparkpeople.com/assets/diet4/nt7_device_h_bg.svg" alt="devices">
+                        <h1>Tools & Settings</h1>
+                    </div>
+                    <div class="devices1">Get a Wifi Enabled Scale</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pop up's html code -->
+    <div id="bmiModel" class="bmiModel">
+
+        <!-- Modal content -->
+        <div class="bmiModal-content">
+            <div class="bmi_header">
+                <h2>Tell Us About Yourself</h2>
+            </div>
+            <div class="bmi_inputs">
+                <div class="inputs_header">
+                    <h2>Calculate BMI</h2>
+                </div>
+                <div class="inputs_info">
+                    <p>To get started tell us your current weight and height:</p>
+                    <input type="number" id="bmi_weight" placeholder="Current weight in Kg's">
+                    <input type="number" id="bmi_height" placeholder="Height in cm">
+                    <button id="cal_bmi">Calculate BMI</button>
+                </div>
+            </div>
+            <div class="bmi_ranges">
+                <div class="range_header">
+                    <h2>Your (BMI) and Target Weight Ranges</h2>
+                </div>
+                <div class="rangesinfo">
+                    <div class="bmi_you" id="bmi_you">
+                        <img class="bmi_you_img" src="https://sparkpeo.hs.llnwd.net/e1/assets/NEWmyspark/you_are.gif" alt="bmi index">
+                        <span id="bmi_value"></span>
+                    </div>
+                    <img class="bmi_img" src="https://sparkpeo.hs.llnwd.net/e1/assets/NEWmyspark/bmi_chart.gif" alt="bmi_chart">
+                </div>
+            </div>
+            <div class="weights">
+                <div class="weights_header">
+                    <h2>Set Your Weight Goal</h2>
+                </div>
+                <div class="weights_input">
+                    <p>Current Weight: <span id="current_weight">65 KG</span></p>
+                    <input type="text" id="target_weight" placeholder="Target Weight in KG">
+                    <p>By When: 
+                        <select name="strMonth" id="target_month">
+                            <option value="0"> Month</option>
+                            <option value="1" selected="">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select name="strDay" id="target_day">
+                            <option value="0"> Day</option>
+                            <option value="1">1</option>
+                            <option value="2" >2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30" selected="">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <select name="strYear" id="target_year">
+                            <option value="0"> Year</option>
+                            <option value="2020">2020</option>
+                            <option value="2021" selected="">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <button class="bmi_save" id="bmi_save">Save Your Changes</button>
+            <button class="bmi_save" id="bmi_close">Close</button>
+        </div>
+    </div>
+
+    <div id="Fitness_model" class="Fitness_model">
+        <!-- Modal content -->
+        <div class="fitness_content">
+            <div class="bmi_header">
+                <h2>Change What You Measure</h2>
+                <p>Below are measurements that you may consider tracking. 
+                    You can also add custom measurements at the bottom of the page. 
+                    <strong>Check the box for items you want to measure</strong>
+                </p>
+            </div>
+            <div class="fit_inputs">
+                <div class="inputs_header">
+                    <h2>Fitness Measures</h2>
+                </div>
+                <div class="inputs_info">
+                    <div>
+                        <input type="checkbox" id="pushUps_check">
+                        <p style="display: inline-block;"><strong>Pushups</strong> (monthly) - Do as many as possible in one minute</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="crunches_check">
+                        <div style="display: inline-block;"><strong>Crunches</strong> (monthly) - Do as many as possible in one minute</div>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="step_check">
+                        <p style="display: inline-block;"><strong>3-Minute Step Test</strong> (monthly) - Do as many as possible in one minute</p>
+                    </div>                
+                </div>
+            </div>
+            <div class="health_inputs">
+                <div class="inputs_header">
+                    <h2>Health Measurements</h2>
+                </div>
+                <div class="inputs_info">
+                    <div>
+                        <input type="checkbox" id="bp_check">
+                        <p style="display: inline-block; margin-bottom: 0px;"><strong>Blood Pressure - Diastolic</strong> (daily) - Measured at a doctor’s office or</p>
+                        <span> at home using a sphygmomanometer</span>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <input type="checkbox" id="heartRate_check">
+                        <div style="display: inline-block;"><strong> Resting Heart Rate</strong> (daily) - Count pulse for 1 minute before getting out of bed in the morning</div>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Cholesterol_check">
+                        <p style="display: inline-block;"><strong>Cholesterol </strong> (monthly) - Measured by a doctor-ordered blood test called a lipid pane</p>
+                    </div>                
+                </div>
+            </div>
+            <button class="fit_model_btn" id="fit_model_btn">Save Changes</button>
+            <button class="fit_model_close" id="fit_model_close">Close</button>
+        </div>
+      
+    </div>
+    <script src="./myWeight.js"></script>
+</body>
+</html>

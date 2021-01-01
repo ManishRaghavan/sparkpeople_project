@@ -11,7 +11,6 @@ body{
     border-bottom: 5px solid #22a7ee;
 }
 
-
 .header__nav{
     max-width: 1040px;
     margin: auto;
@@ -201,49 +200,46 @@ body{
 .nav_btns_submenu li{
     border-right: none;
 }
-.othergoals_date{
-    padding: 15px;
+.land_challenges {
+    width: 1366px;
+    background-color: rgb(238, 237, 237);
+    margin-top: 0px;
 }
-.othergoals_date button{
-    font-family: helvetica, Arial, Helvetica, sans-serif;
+.land_challenges > h1 {
+    margin-left: 20%;
+    height: 0.7cm;
 }
-.date_leftArrow, .date_rightArrow, .calender_symbol{
-    line-height: 900;
-    width: 17px;
-    height: 32px;
-    padding: 0;
-    background-size: 108%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
-    background-color: transparent;
-    font-size: 16px;
-    display: inline-block;
-    border: none;
-    vertical-align: middle;
+.land_challenges > p {
+    margin-left: 20%;
+    margin-top: 0px;
 }
-.date_rightArrow{
-    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
-    background-size: 100%;
+.challenge_central_flex {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 19%;
+    margin-top: 30px;
 }
-.date_show{
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    margin: 0 1em;
-    max-width: 22em;
-    border: none;
-    background-color: transparent;
-    vertical-align: middle;
+.challenge_central_img {
+    height: 550px;
+    width: 380px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 5px;
 }
-.calender_symbol{
-    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
-    width: 32px;
-    background-size: 100%;
-    margin-right: 0.8em;
-.line_break{
-    height: 5px;
-    background-color: #22a7ee;
-
+.challenge_central_img > img {
+    height: 400px;
+    width: 380px;
+}
+.challenge_central_img > img:hover {
+    transform: scale(1.1)
+}
+.challenge_central_img > h3 {
+    margin-left: 15px;
+}
+.challenge_central_img > p {
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 0.6cm;
 }

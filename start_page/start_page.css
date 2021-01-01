@@ -11,6 +11,7 @@ body{
     border-bottom: 5px solid #22a7ee;
 }
 
+
 .header__nav{
     max-width: 1040px;
     margin: auto;
@@ -242,6 +243,7 @@ body{
     background-size: 100%;
     margin-right: 0.8em;
 }
+
 /* ------------start upper part------------------- */
 .start__heading
 {
@@ -430,12 +432,10 @@ body{
 {
     width: 100%;
     height: 600px;
-    
     position: relative;
 }
 .todayspoint_box
 {
-    
     width: 400px;
     height: 500px;
    position: absolute;
@@ -475,6 +475,7 @@ body{
 .round_inner:hover{
     transform: scale(1.1);
     color: orange;
+
 }
 .round_inner>p{
     text-align: center;
@@ -953,3 +954,4 @@ body{
     width: 100%;
     background-color: #e6e6e6;
 }
+
