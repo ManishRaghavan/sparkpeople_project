@@ -357,10 +357,10 @@ function showFitnessData() {
 
     let temp = targetValue - weight_data
     if(temp >= 0){
-        weight_diff.innerHTML = `${temp} Pounds Lost`
+        weight_diff.innerHTML = `${temp} Kilogram Lost`
     } else if(temp < 0) {
         temp = update - targetValue
-        weight_diff.innerHTML = `${temp} Pounds Gain`
+        weight_diff.innerHTML = `${temp} Kilogram Gain`
     }
 }
 

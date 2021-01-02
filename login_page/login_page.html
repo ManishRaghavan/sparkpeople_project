@@ -20,7 +20,7 @@
             </div>
             <div class="header_nav_dropdown">
                 <ul class="header_nav_dropdown_head">
-                    <li id="no_effect"><a href="#">START</a></li>
+                    <li id="no_effect"><a href="../start_page/start_page.html">START</a></li>
                     <li><a href="#">MY TRACKERS</a>
                         <ul class="dropdown_subelements">
                             <li>Start</li>
@@ -133,7 +133,7 @@
                     <label for="checkbox" class="remember_text">Remember me</label>
                     <p class="forgot_password">Forgot Your Password</p>
                 </form>
-                <button id="login_button" class="login_button"><a href="../start_page/start_page.html" style="text-decoration: none;color: white;">Log in Now</a></button>
+                <button id="login_button" class="login_button"><a id="link" style="text-decoration: none;color: white;">Log in Now</a></button>
             </div>
         </div>
         <div class="lower_half">
@@ -176,16 +176,18 @@
 
            let data = JSON.parse(d)
 
-           if(name === data.user_name)
+           if(name === data.user_name && password === data.user_password)
            {
                console.log("yes")
+               document.getElementById("link").setAttribute("href","../start_page/start_page.html")
            }
-           if(password === data.user_password)
-           {
-               console.log("yes2")
-           }
+        //    if(password === data.user_password)
+        //    {
+        //        console.log("yes2")
+        //    }
            if(name !== data.user_name )
            {
+               
                 alert("User name or Password is wrong \n"+ "Check Again")
                 console.log("name not matches")
            }
