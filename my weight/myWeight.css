@@ -280,7 +280,7 @@
 }
 .pushups_input{
     /* padding: 0px 30px; */
-    margin: 0px 60px 0px 60px;
+    margin: 0px 60px 0px 58px;
 }
 .pushups_data{
     background-color: white;
@@ -313,7 +313,7 @@
     background-color: #fff;
     display: none;
     z-index: 100000;
-    padding-top: 50px;
+    padding-top: 20px;
     left: 0;
     top: 0;
     width: 100%;
@@ -330,7 +330,7 @@
 }
 .bmiModal-content{
     width: 600px;
-    height: 680px;
+    height: 660px;
     background-color: white;
     margin: auto;
     padding: 30px 60px;
