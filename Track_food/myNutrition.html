@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myNutrition.css">
+    <link rel = "icon" href = "../resources/logo.png" 
+    type = "image/x-icon"> 
+    <title>myNutrition</title>
+</head>
+
+<body>
+    <!------------------------------------------- header ------------------------------------------------------------>
+    <div class="header">
+        <div class="header__nav">
+            <div class="header__nav__logo">
+                <a href="#" class="header_nav_a">
+                    <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/sparkpeople_logo.svg"
+                        alt="sparkpeople_logo">
+                    <span class="header__nav__logo_tagline">Live Healthy & Happy</span>
+                </a>
+            </div>
+            <div class="header_nav_dropdown">
+                <ul class="header_nav_dropdown_head">
+                    <li id="no_effect"><a href="../start_page/start_page.html">START</a></li>
+                    <li><a href="../my weight/myWeight.html">MY TRACKERS</a>
+                        <ul class="dropdown_subelements">
+                            <li>Start</li>
+                            <li>my Nutrition</li>
+                            <li>My Fitness</li>
+                            <li>My Weight</li>
+                            <li>Other Goals</li>
+                            <li>SparkStreks</li>
+                            <li>Reports</li>
+                            <li>SparkMail</li>
+                            <li>My SparkPoints</li>
+                        </ul>
+                    </li>
+                    <li><a href="../feed/feed.html">COMMUNITY</a>
+                        <ul class="dropdown_subelements">
+                            <li>Community Home</li>
+                            <li>Community Feed</li>
+                            <li>Message Boards</li>
+                            <li>SparkTeams</li>
+                            <li>Challenge Central</li>
+                            <li>SparkPages</li>
+                            <li>Member Blogs</li>
+                            <li>SparkStories</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">LEARN</a>
+                        <ul class="dropdown_subelements">
+                            <li>What's New</li>
+                            <li>The SparkPeople 28 Day Program</li>
+                            <li>Nutrition</li>
+                            <li>Fitness</li>
+                            <li>Motivation</li>
+                            <li>Health & Wellness</li>
+                            <li>Weight Loss</li>
+                            <li>Fitness Videos</li>
+                            <li>Health Family</li>
+                            <li>Pregnancy & Postpartum</li>
+                            <li>Instant Inspiration</li>
+                            <li>Lifestyle Centers</li>
+                            <li>The SparkPeople Blog</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CHALLENGES</a>
+                        <ul class="dropdown_subelements">
+                            <li>Spark Challenges</li>
+                            <li>Calender Challenges</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SHOP</a>
+                        <ul class="dropdown_subelements">
+                            <li>Kitchen</li>
+                            <li>Food</li>
+                            <li>Fitness & Apparel</li>
+                            <li>Music</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">RECIPES</a></li>
+                </ul>
+            </div>
+            <div class="header__social">
+                <!-- <div class="header__social__facebook"></div> -->
+                <!-- <div id="social_logo" class="social_logo"> -->
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/facebook_color.svg" alt="facebook"
+                    width="22px" id="social_active">
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/pinterest_color.svg" alt="pinterest_color"
+                    width="22px" id="social_active">
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/instagram.svg" alt="instagram" width="22px"
+                    id="social_active">
+                <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_apps.svg" alt="instagram" width="50px"
+                    id="social_active">
+                <!-- </div> -->
+                <!-- <img src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_search_expand.svg" alt="search" width="-32px"> -->
+                <div class="header__social__search" id="header__social__search">
+
+                    <!-- <button id="header__social__search_btn" class="header__social__search_btn"> -->
+                    <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav_btns">
+                <ul class="nav_btns_help">
+                    <li>Help</li>
+                    <li class="nav_btns_hover">RANJITHKUMARK8 <img
+                            src="https://sparkpeo.hs.llnwd.net/e1/assets/resource/nav_blue_arrow_down.svg">
+                        <ul class="nav_btns_submenu">
+                            <li>Account/E-Mail Preferences</li>
+                            <li>Log Out</li>
+                        </ul>
+                    </li>
+                    <li>36 Points</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------- header ends ------------------------------------------------------------>
+
+    <!-- main box -->
+    <div class="mainbox">
+
+        <h1 style="font-size: 35px;margin-left: 20px;">Track Your Food</h1>
+        <div class="othergoals_calender">
+            <div class="othergoals_date">
+                <button class="date_leftArrow"></button>
+                <button class="date_show">Saturday, January 2</button>
+                <button class="calender_symbol"></button>
+                <button class="date_rightArrow"></button>
+            </div>
+        </div>
+        <!-- options box -->
+        <div class="optionselector">
+            <div class="searchbox" id="1" onclick="color()">
+                <h2 style="text-align: center;margin-top: 10px;">Search</h2>
+            </div>
+            <div class="searchbox" >
+                <h2 id="2"  style="text-align: center;margin-top: 10px;">Recent</h2>
+            </div>
+            <div class="searchbox" id="3" >
+                <h2 style="text-align: center;margin-top: 10px;">Favorites</h2>
+            </div>
+            <div class="searchbox" id="4" >
+                <h2 style="text-align: center;margin-top: 10px;">Groupings</h2>
+            </div>
+            <div class="searchbox" id="5" >
+                <h2 style="text-align: center;margin-top: 10px;">Recepies</h2>
+            </div>
+        </div>
+        <!-- options box -->
+        <div class="inputbox">
+            <input style="width: 500px; height: 30px;margin: 10px;border-radius:5px ; float: left;" type="text"
+                id="input" />
+            <div class="search" id="search">
+                <h3>Search</h3>
+            </div>
+            <input style="margin-top: 10px;" type="radio" />
+            <label style="font-size: 10px;">All</label>
+            <input style="margin-top: 10px;" type="radio" />
+            <label style="font-size: 10px;">Any of Words</label>
+            <input style="margin-top: 10px;margin-left:8px;" type="checkbox" />
+            <label style="font-size: 10px;">sort</label>
+        </div>
+        <div class="hiddenbox" id="hiddenbox">
+            <p style="margin-left: 20px;color: #476CA9;"><strong>Choose the best search result below to continue (or
+                    search again)</strong>
+                <h style="font-size: 25px;margin-left: 320px;" id="close">&times;</h>
+            </p>
+
+            <div class="google">
+                <div class="googlebox" id="googlebox">
+                    <p style="margin:0;margin-left: 5px; padding-top:5px;">You have not entered anything <strong>OOPs!</strong></p>
+                </div>
+            </div>
+            <div class="search2" id="addfood">
+                <h3>Add a food +</h3>
+            </div>
+
+            <select name="food" id="food">
+                <option value="breakfast" id="breakfast">Breakfast</option>
+                <option value="lunch" id="lunch">Lunch</option>
+                <option value="dinner" id="dinner">Dinner</option>
+                <option value="snacks" id="snacks">Snacks</option>
+              </select>
+
+        </div>
+
+        <table >
+            <tr style="height:40px;background-color: #E8E8E8;">
+                <th></th>
+                <th></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th style="background-color: rgb(187, 187, 187);">CALORIES</th>
+                <th >CARBS</th>
+                <th style="background-color: rgb(187, 187, 187);">FAT</th>
+                <th>PROTEIN</th>
+                <th style="background-color: rgb(187, 187, 187);">FIBER</th>
+            </tr>
+            <!-------------------------------------- breakfast ------------------------------------------>
+            <tr style="height:40px;background-color: rgb(238, 232, 255);border-bottom:1px solid gray ;">
+                <td style="font-size: 25px;font-weight: 600;">Breakfast</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td></td>
+                <td></td>
+                <td ><div class="search">
+                    <h3>Add a food +</h3>
+                </div></td>
+            </tr>
+            <tr  style="height:40px;border-bottom:0.5px solid gray ">
+                <td id="_breakfast" style="font-size:15px;" >None</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="_breakfast1"></td>
+                <td id="_breakfast2"></td>
+                <td id="_breakfast3"></td>
+                <td id="_breakfast4"></td>
+                <td id="_breakfast5"></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
+                <td style="font-size:15px;"><strong>Breakfast Total:</strong></td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_breakfast6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_breakfast7" >0</td>
+                <td  id="_breakfast8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_breakfast9" >0</td>
+                <td  id="_breakfast10" style="background-color: rgb(255, 255, 188);" >0</td>
+            </tr>
+            <!-------------------------------------- breakfast ends ------------------------------------------>
+            <!-------------------------------------- lunch start ------------------------------------------>
+            <tr style="height:40px;background-color: rgb(238, 232, 255);border-bottom:1px solid gray ;">
+                <td style="font-size: 25px;font-weight: 600;">Lunch</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td></td>
+                <td></td>
+                <td ><div class="search">
+                    <h3>Add a food +</h3>
+                </div></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray ">
+                <td  id="_lunch" style="font-size:15px;" >None</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_lunch1"></td>
+                <td id="_lunch2"></td>
+                <td id="_lunch3"></td>
+                <td id="_lunch4"></td>
+                <td id="_lunch5"></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
+                <td style="font-size:15px;"><strong>Lunch Total:</strong></td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_lunch6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_lunch7" >0</td>
+                <td id="_lunch8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_lunch9">0</td>
+                <td id="_lunch10" style="background-color: rgb(255, 255, 188);" >0</td>
+            </tr>
+
+            <!-------------------------------------- lunch ends ------------------------------------------>
+             <!-------------------------------------- dinner start ------------------------------------------>
+             <tr style="height:40px;background-color: rgb(238, 232, 255);border-bottom:1px solid gray ;">
+                <td style="font-size: 25px;font-weight: 600;">Dinner</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td></td>
+                <td></td>
+                <td ><div class="search">
+                    <h3>Add a food +</h3>
+                </div></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray ">
+                <td id="_dinner" style="font-size:15px;" >None</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_dinner1"></td>
+                <td id="_dinner2"></td>
+                <td id="_dinner3"></td>
+                <td id="_dinner4"></td>
+                <td id="_dinner5"></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
+                <td style="font-size:15px;"><strong>Dinner Total:</strong></td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_dinner6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_dinner7" >0</td>
+                <td id="_dinner8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_dinner9" >0</td>
+                <td id="_dinner10" style="background-color: rgb(255, 255, 188);" >0</td>
+            </tr>
+
+            <!-------------------------------------- dinner ends ------------------------------------------>
+
+             <!-------------------------------------- Snacks start ------------------------------------------>
+             <tr style="height:40px;background-color: rgb(238, 232, 255);border-bottom:1px solid gray ;">
+                <td style="font-size: 25px;font-weight: 600;">Snacks</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td></td>
+                <td></td>
+                <td ><div class="search">
+                    <h3>Add a food +</h3>
+                </div></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray ">
+                <td id="_snacks"style="font-size:15px;" >None</td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_snacks1"></td>
+                <td id="_snacks2"></td>
+                <td id="_snacks3"></td>
+                <td id="_snacks4"></td>
+                <td id="_snacks5"></td>
+            </tr>
+            <tr style="height:40px;border-bottom:0.5px solid gray;background-color: lightyellow;">
+                <td style="font-size:15px;"><strong>Snacks Total:</strong></td>
+                <td></td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td id="_snacks6" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_snacks7" >0</td>
+                <td id="_snacks8" style="background-color: rgb(255, 255, 188);">0</td>
+                <td id="_snacks9">0</td>
+                <td id="_snacks10" style="background-color: rgb(255, 255, 188);" >0</td>
+            </tr>
+
+            <!-------------------------------------- Snacks ends ------------------------------------------>
+
+
+            <tr style="height:40px;background-color: #E8E8E8;">
+                <th></th>
+                <th></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th style="background-color: rgb(187, 187, 187);">CALORIES</th>
+                <th >CARBS</th>
+                <th style="background-color: rgb(187, 187, 187);">FAT</th>
+                <th>PROTEIN</th>
+                <th style="background-color: rgb(187, 187, 187);">FIBER</th>
+            </tr>
+
+            <tr style="height:40px;background-color: white;">
+                <th></th>
+                <th></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th>Total: </th>
+                <th id="total1" style="background-color: rgb(241, 241, 241);">0</th>
+                <th id="total2" >0</th>
+                <th id="total3" style="background-color: rgb(241, 241, 241);">0</th>
+                <th id="total4" >0</th>
+                <th id="total5" style="background-color: rgb(241, 241, 241);">0</th>
+            </tr>
+            <tr style="height:40px;background-color: rgb(255, 255, 188);">
+                <th></th>
+                <th></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th>Your Daily Goal: </th>
+                <th>1,860 - 2,210</th>
+                <th >209 - 359</th>
+                <th>41 - 86</th>
+                <th>75 - 193</th>
+                <th>	25 - 35</th>
+            </tr>
+            <tr style="height:40px;background-color: white;">
+                <th></th>
+                <th></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th>Remaining Today:  </th>
+                <th style="background-color: rgb(241, 241, 241);">1,860 - 2,210</th>
+                <th >209 - 359</th>
+                <th style="background-color: rgb(241, 241, 241);">41 - 86</th>
+                <th>75 - 193</th>
+                <th style="background-color: rgb(241, 241, 241);">	25 - 35</th>
+            </tr>
+        </table>
+        <p style="margin-left: 20px;" id="cal">You've burned 0 calories today</p>
+        <h1 style="margin-left: 20px;">Weekly Progerss</h1>
+
+        <!-- bottom table/////////////////////////////////////////////////////// -->
+
+        <table id="customers">
+            <tr>
+              <th>Nutrients:</th>
+              <th >Goal</th>
+              <th>THU 12/24</th>
+              <th>FRI 12/25</th>
+              <th>SAT 12/26</th>
+              <th>SUN 12/27</th>
+              <th>MON 12/28</th>
+              <th>TUE 12/29</th>
+              <th>TODAY</th>
+            </tr>
+            <tr>
+              <td>Calories</td>
+              <td style="color: red;" >1,860 - 2,210</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+              
+            </tr>
+            <tr>
+                <td>Fat</td>
+                <td style="color: red;" >41 - 86g</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                
+              </tr>
+
+              <tr>
+                <td>Carbohydrates</td>
+                <td style="color: red;" >209 - 359g</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                
+              </tr>
+
+              <tr>
+                <td>Protein</td>
+                <td style="color: red;" >	75 - 193g</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                
+              </tr>
+              <tr>
+                <td>Fiber</td>
+                <td style="color: red;" >	25 - 35g</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                
+              </tr>
+           
+          </table>
+          
+
+
+
+
+        <!-- last div -->
+    </div>
+
+      <!-- -------------------------------------------footer-------------------------------------------------------------- -->
+    <div class="footer_center">
+        <div class="footer footer_line1">
+            <p>About Us</p>
+            <div class="vertical_line"></div>
+            <p>Contact Us</p>
+            <div class="vertical_line"></div>
+            <p>Home</p>
+            <div class="vertical_line"></div>
+            <p>My Tools</p>
+            <div class="vertical_line"></div>
+            <p>Diet Resources</p>
+            <div class="vertical_line"></div>
+            <p>Diet Community</p>
+            <div class="vertical_line"></div>
+            <p>Diet Blogs</p>
+            <div class="vertical_line"></div>
+            <p>Healthy Recipes</p>
+            <div class="vertical_line"></div>
+            <p>Spark 360</p>
+            <div class="vertical_line"></div>
+            <p>Mobile</p>
+            <div class="vertical_line"></div>
+            <p>Help Desk</p>
+            <div class="vertical_line"></div>
+        </div>
+        <div class="footer footer_line2">
+            <p>Nutrition Articles</p>
+            <div class="vertical_line"></div>
+            <p>Fitness Articles</p>
+            <div class="vertical_line"></div>
+            <p>Motivation Articles</p>
+            <div class="vertical_line"></div>
+            <p>Exercise Demos</p>
+            <div class="vertical_line"></div>
+            <p>Spark Teams</p>
+            <div class="vertical_line"></div>
+            <p>Spark Pages</p>
+            <div class="vertical_line"></div>
+            <p>Calorie Counter</p>
+            <div class="vertical_line"></div>
+            <p>SparkPeople Blog</p>
+            <div class="vertical_line"></div>
+            <p>Message Board Archives</p>
+            <div class="vertical_line"></div>
+        </div>
+        <div class="footer footer_line3">
+            <p>&copy; Copyright SparkPeople. Inc 2021.,</p>
+            <div class="footer">
+                <p>All Rights Reserved</p>
+                <div class="vertical_line"></div>
+                <p>Privacy Policy</p>
+                <div class="vertical_line"></div>
+                <p>About Our Ads</p>
+                <div class="vertical_line"></div>
+            </div>
+        </div>
+        <p class="footer_line4">SparkPeople, Spark Coach, SparkPages, SparkDiet, SparkAmerica, SparkRecipes, Daily Spark, and other marks are trademarks of SparkPeople. Inc. All Rights Reserved.<br>No portion of this website can be used without the permission of SparkPeople or its authorized affiliates.<br>SPARKPEOPLE is a registered trademark of SparkPeople, Inc. in the United Staes, European Union, Canada, and Australia. All rights reserved.</p>
+        <p class="footer_last_line">NOTE : Terms and Conditions and Privacy Policy last updated on October 25, 2013</p>
+    </div>
+      <!-- -------------------------------------------footer-------------------------------------------------------------- -->
+
+
+
+    <!-- ------------------------------------------------dom part------------------------------ -->
+
+    <script>
+
+        document.getElementById("search").addEventListener("click", view)
+        document.getElementById("close").addEventListener("click", close)
+
+        
+
+        function close() {
+            document.getElementById("hiddenbox").style.display = "none"
+        }
+
+
+        function view() {
+
+            let input = document.getElementById("input").value
+
+            document.getElementById("hiddenbox").style.display = "block"
+            let d = localStorage.getItem("data")
+
+            let data = JSON.parse(d)
+
+            const search_data = ["egg", "chicken", "carrot"]
+
+            let html = ""
+
+            if (input == search_data[0]) {
+                let id = 0
+                for (i in data[0].egg) {
+                    id++
+                    html += ` 
+                    <div class="googlebox" id="a${id}">
+                        <p style="margin:0;margin-left: 5px; padding-top:5px;">${data[0].egg[i]}</p>
+                    </div>`
+                    document.getElementById("googlebox").innerHTML = html
+                }
+            }
+
+
+            if (input == search_data[1]) {
+                for (i in data[1].chicken) {
+                    html += ` 
+                    <div class="googlebox">
+                        <p style="margin:0;margin-left: 5px; padding-top:5px;">${data[1].chicken[i]}</p>
+                    </div>`
+                    document.getElementById("googlebox").innerHTML = html
+                }
+            }
+
+            if (input == search_data[2]) {
+                
+                for (i in data[2].carrot) {
+                    html += ` 
+                    <div class="googlebox1" >
+                        <p style="margin:0;margin-left: 5px; padding-top:5px;">${data[2].carrot[i]}</p>
+                    </div>`
+                    document.getElementById("googlebox").innerHTML = html
+                }
+            }
+        }
+
+        document.getElementById("addfood").addEventListener("click",add)
+       
+function add()
+{ 
+    let input = document.getElementById("input").value
+    let val =document.getElementById("food").value
+    if(val == "breakfast")
+    {
+        document.getElementById("_breakfast").textContent = input
+    document.getElementById("_breakfast1").textContent = 72
+    document.getElementById("_breakfast2").textContent = 33
+    document.getElementById("_breakfast3").textContent = 55
+    document.getElementById("_breakfast4").textContent =33
+    document.getElementById("_breakfast5").textContent = 120
+   
+    localStorage.setItem("breakfast",JSON.stringify([72,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3/10
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
+    
+    document.getElementById("_breakfast6").textContent = 72
+    document.getElementById("_breakfast7").textContent = 33
+    document.getElementById("_breakfast8").textContent = 55
+    document.getElementById("_breakfast9").textContent = 33
+    document.getElementById("_breakfast10").textContent = 120
+
+    }
+    if(val == "lunch")
+    {
+        document.getElementById("_lunch").textContent = input
+    document.getElementById("_lunch1").textContent = 272
+    document.getElementById("_lunch2").textContent = 53
+    document.getElementById("_lunch3").textContent = 73
+    document.getElementById("_lunch4").textContent =33
+    document.getElementById("_lunch5").textContent = 20
+    document.getElementById("_lunch6").textContent = 172
+    document.getElementById("_lunch7").textContent = 53
+    document.getElementById("_lunch8").textContent = 70
+    document.getElementById("_lunch9").textContent =33
+    document.getElementById("_lunch10").textContent = 20
+    localStorage.setItem("lunch",JSON.stringify([272,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3/10
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
+    }
+    if(val == "dinner")
+    {
+        document.getElementById("_dinner").textContent = input
+    document.getElementById("_dinner1").textContent = 172
+    document.getElementById("_dinner2").textContent = 53
+    document.getElementById("_dinner3").textContent = 70
+    document.getElementById("_dinner4").textContent =33
+    document.getElementById("_dinner5").textContent = 20
+    document.getElementById("_dinner6").textContent = 172
+    document.getElementById("_dinner7").textContent = 53
+    document.getElementById("_dinner8").textContent = 70
+    document.getElementById("_dinner9").textContent =33
+    document.getElementById("_dinner10").textContent = 20
+    localStorage.setItem("dinner",JSON.stringify([72,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3/10
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
+    }
+    if(val == "snacks")
+    {
+        document.getElementById("_snacks").textContent = input
+    document.getElementById("_snacks1").textContent = 172
+    document.getElementById("_snacks2").textContent = 53
+    document.getElementById("_snacks3").textContent = 70
+    document.getElementById("_snacks4").textContent =33
+    document.getElementById("_snacks5").textContent = 20
+    document.getElementById("_snacks6").textContent = 172
+    document.getElementById("_snacks7").textContent = 53
+    document.getElementById("_snacks8").textContent = 70
+    document.getElementById("_snacks9").textContent =33
+    document.getElementById("_snacks10").textContent = 20
+    localStorage.setItem("snacks",JSON.stringify([72,33,55,33,120]))
+
+    let d1 =JSON.parse( localStorage.getItem("breakfast"))
+    let d2 = JSON.parse(localStorage.getItem("lunch"))
+    let d3 = JSON.parse(localStorage.getItem("dinner"))
+    let d4 = JSON.parse(localStorage.getItem("snacks"))
+
+
+    let c1 = Number(d1[0])+Number(d2[0])+Number(d3[0])+Number(d4[0])
+    let c2 = Number(d1[1])+Number(d2[1])+Number(d3[1])+Number(d4[1])
+    let c3 = Number(d1[2])+Number(d2[2])+Number(d3[2])+Number(d4[2])
+    let c4 = Number(d1[3])+Number(d2[3])+Number(d3[3])+Number(d4[3])
+    let c5 = Number(d1[4])+Number(d2[4])+Number(d3[4])+Number(d4[4])
+    
+    document.getElementById("total1").textContent = c1
+    document.getElementById("total2").textContent = c2
+    document.getElementById("total3").textContent = c3/10
+    document.getElementById("total4").textContent = c4
+    document.getElementById("total5").textContent = c5/10
+    document.getElementById("cal").textContent = `You've burned ${c1} calories today`
+
+    }
+
+}
+
+    localStorage.setItem("breakfast",JSON.stringify([0,0,0,0,0]))
+    localStorage.setItem("lunch",JSON.stringify([0,0,0,0,0]))
+    localStorage.setItem("dinner",JSON.stringify([0,0,0,0,0]))
+    localStorage.setItem("snacks",JSON.stringify([0,0,0,0,0]))
+
+   
+    </script>
+
+    <script type="text/javascript" src="data.js">
+
+    </script>
+</body>
+
+</html>

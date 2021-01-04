@@ -1,0 +1,735 @@
+
+.myweights{
+    background-color: #f4f5f7;
+    width: 1000px;
+    position: relative;
+    font-family: arial, verdana, sans-serif;
+    box-sizing: border-box;
+    margin: auto;
+    /* display: none; */
+}
+.myweight{
+    padding: 10px 15px 15px 15px;
+}
+.myweight_header{
+    margin: 0px 0px 10px 8px;
+}
+.myweight_header h1 {
+    margin: 0;
+    padding: 0;
+    color: #3f3f3f;
+    font-size: 35px;
+    line-height: normal;
+}
+#small{
+    font-size: 20px;
+    color: #666;
+}
+.weightloss_Box{
+}
+.weightloss_home{
+    margin-left: .5em;
+    border-radius: .3em;
+    background-color: white;
+    padding: 5px 12px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.home_header h1, #weight_diff{
+    margin: 5px 0px;
+    font-size: 22px;
+}
+.home_header p, .home_header span{
+    font-size: 13px;
+    margin: 5px 0px;
+    display: inline-block;
+}
+.home_header button{
+    color: white;
+    background-color: #1095dc;
+    border: 1px solid #1095dc;
+    padding: 5px;
+    border-radius: 2px;
+}
+.home_header button:hover{
+    opacity: 0.9;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.home_header button:active,
+.home_header button:focus{
+    outline: none;
+}
+.othergoals_date{
+    padding: 15px;
+}
+.othergoals_date button{
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+}
+.date_leftArrow, .date_rightArrow, .calender_symbol{
+    line-height: 900;
+    width: 17px;
+    height: 32px;
+    padding: 0;
+    background-size: 108%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
+    background-color: transparent;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+}
+.date_rightArrow{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
+    background-size: 100%;
+}
+.date_show{
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    margin: 0 1em;
+    max-width: 22em;
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.calender_symbol{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
+    width: 32px;
+    background-size: 100%;
+    margin-right: 0.8em;
+}
+.myweight_tracker_top{
+    background-color: white;
+    border: 1px solid #b6bbe6;
+    box-shadow: 0px 0px 6px #ccc;
+    width: 650px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;   
+    padding: 10px;
+    margin: 0px 15px 0px 8px;
+
+}
+.myweight_tracker_top button,
+.myweight_tracker_bottom button{
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+}
+.myweight_tracker_top_green{
+    background-color: #009f9f;
+    border: 1px solid #009f9f;
+}
+.myweight_tracker_top_blue{
+    background-color: #1095dc;
+    border: 1px solid #1095dc;
+}
+.myweight_tracker_top button:hover{
+    opacity: 0.9;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.tracker_head, 
+.tracker_head2, 
+.weights_data, 
+.myweight_footer, 
+.wellness_data{
+    display: flex;
+}
+.myweight_tracker{
+    width: 950px;
+    border: 1px solid #b6bbe6;
+    box-shadow: 0px  0px 6px #ccc;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin: 0px 15px 10px 8px;
+}
+.tracker_head{
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    background-color: #e8e8e8;
+}
+.head1{
+    padding: 12px 22px;
+
+}
+.head2{
+    background-color: #d6d6d6;
+    padding: 12px 52px;
+}
+.tracker_head2{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5fe;
+    border: 1px solid #d7d7f9;
+    padding: 8px;
+}
+.head2_subhead{
+    font-weight: bold;
+    font-size: 22px;
+}
+.head2_buttons button{
+    color: #0080c4;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+.weights_data, .wellness_data{
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+.weights_data_head div, 
+.weights_data_Lentry div, 
+.weights_data_Recommend div,
+.weights_data_head div {
+    background-color: white;
+    padding: 3px 30px 3px 30px;
+}
+.weights_data_Lentry div{
+    width: 120px;
+    /* padding: 0px 20px; */
+}
+.weights_data_Recommend div{
+    width: 120px;
+}
+.wellness_data_value{
+    display: flex !important;
+    flex-direction: column;
+}
+.wellness_data_head div{
+    background-color: white;
+    padding: 1px 70px;
+    align-items: center;
+}
+.wellness_data_Lentry div{
+    width: 140px;
+    background-color: white;
+}
+.wellness_data_recommend div{
+    padding: 1px 70px;
+    background-color: white;
+}
+.myweight_tracker_bottom{
+    padding: 10px;
+}
+.myweight_footer_reports,
+.myweight_footer_tools,
+.myweight_footer_devices{
+    background-color: #fff;
+    border: 1px solid #d7d7f9;
+    box-shadow: 0px 0px 5px #efefef;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 290px;
+    margin-right: 25px;
+}
+.reports_header,
+.tools_header,
+.devices_header{
+    display: flex;
+    padding: 5px;
+    /* margin: 5px; */
+}
+.reports_header h1,
+.tools_header h1,
+.devices_header h1{
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 22px;
+}
+.reports1,
+.tools1,
+.devices1{
+    background: linear-gradient(to bottom,  #ffffff 0%,#f4fbff 49%,#edf8ff 52%,#e8f6ff 100%);
+    padding: 8px 12px;
+    border-bottom: 1px solid #ffffff;
+    font-size: 15px;
+    color: #007fc4;
+}
+/* .fitness_addons{
+    display: none;
+} */
+.pushups{
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding: 1px 80px 1px 40px; */
+    /* background-color: white; */
+    box-sizing: border-box;
+    
+}
+.pushups_content{
+    background-color: white;
+    padding: 0px 80px;
+    border: 3px solid white;
+}
+.pushups_input{
+    /* padding: 0px 30px; */
+    margin: 0px 60px 0px 58px;
+}
+.pushups_data{
+    background-color: white;
+    width: 150px;
+    padding-left: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+}
+.recommend{
+    padding-left: 49px;
+    padding-right: 48px;
+    background-color: white;
+    margin-left: 70px;
+}
+.step{
+    display: flex;
+}
+.step_content{
+    background-color: white;
+    padding: 0px 50px;
+    margin-right: 5px;
+}
+.step_input{
+    margin: 0px 50px;
+}
+/* Pop up Css */
+
+/* BMI Pop up */
+.bmiModel{
+    background-color: #fff;
+    display: none;
+    z-index: 100000;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    transition: display, 1s;
+    /* margin: auto; */
+}
+.bmi_header h2{
+    margin: 0;
+}
+.bmiModal-content{
+    width: 600px;
+    height: 660px;
+    background-color: white;
+    margin: auto;
+    padding: 30px 60px;
+}
+
+.bmi_inputs, 
+.bmi_ranges, 
+.weights, 
+.fit_inputs,
+.health_inputs{
+    background-color: #efefef;
+    /* padding: 10px; */
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 0px 6px #efefef;
+    margin-bottom: 5px;
+}
+.inputs_header, .range_header, .weights_header{
+    background-color: #e9f8f8;
+    padding: 3px 0px 3px 5px;
+    /* font-size: 16px; */
+}
+.inputs_header h2, .range_header h2, .weights_header h2{
+    color: #01a0a0;
+}
+.inputs_info{
+    padding: 10px;
+}
+.inputs_info input{
+    padding: 5px;
+    font-size: 16px;
+}
+.inputs_info button, 
+.bmi_save, 
+.fit_model_btn,
+.fit_model_close{
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff7b08;
+    border: 1px solid #ff7b08;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.inputs_info button:focus,
+.inputs_info button:active,
+.bmi_save:focus,
+.bmi_save:active,
+.fit_model_btn:active,
+.fit_model_btn:focus,
+.fit_model_close:active,
+.fit_model_close:focus{
+    outline: none;
+}
+.bmi_you{
+    margin: auto;
+    /* text-align: center; */
+    margin: 10px;
+    margin-left: 250px;
+}
+.bmi_img{
+    display: block;
+}
+.weights_input{
+    text-align: center;
+}
+.weights_input input{
+    font-size: 16px;
+}
+.bmi_save{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.Fitness_model{
+    background-color: #fff;
+    display: none;
+    z-index: 100000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    transition: display, 1s;
+    /* margin: auto; */
+}
+
+.fitness_content{
+    width: 750px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 30px 60px;
+}
+
+.fit_model_btn, .fit_model_close{
+    background-color: #01a0a0;
+    border: 1px solid #01a0a0;
+    display: inline-block;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+    background-color: #f5f5f5; 
+}
+.header{
+    background-color: white;
+    height: 120px;
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, Sans-serif;
+    border-bottom: 5px solid #22a7ee;
+}
+
+
+.header__nav{
+    max-width: 1040px;
+    margin: auto;
+    position: relative;
+}
+.header_nav_a{
+    position: relative;
+}
+.header__nav__logo a img{
+    width: 300px;
+    margin: 8px 0px 3px 20px;
+}
+.header__nav__logo_tagline{
+    position: absolute;
+    bottom: -2px;
+    right: 0px;
+    color: #999;
+    font-size: 12px;
+    width: 120px;
+}
+.header_nav_dropdown_head{
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+.header_nav_dropdown_head li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 20px;
+    padding: 0.75em 0.9em;
+    display: block;
+}
+.header_nav_dropdown_head li a:hover{
+    color: #666;
+    background-color: #f8f8f8;
+    position: relative;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+}
+
+.dropdown_subelements{
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d5d5d5;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    left: auto;
+    padding: 0;
+}
+.dropdown_subelements li{
+    text-align: left;
+    list-style: none;
+    width: 250px;
+    color: #333;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 8px 8px 8px 8px;
+}
+.dropdown_subelements li:hover{
+    border-left: 3px solid #22a7ee;
+    background-color: #f8f8f8;
+}
+.header_nav_dropdown_head li:hover .dropdown_subelements{
+    display: block;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.header_nav_dropdown_head li a:hover{
+    border-top: 3px solid #22a7ee;
+}
+#no_effect a:hover{
+    color: #666;
+    background-color: #f8f8f8;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+/* .header__social__facebook{
+    background-image: url(https://sparkpeo.hs.llnwd.net/e1/assets/resource/facebook_color.svg);
+    width: 32px;
+} */
+.header__social{
+    position: absolute;
+    right: 0;
+    /* top: -2px; */
+    top: 85px;
+    display: flex;
+    overflow: hidden;
+}
+.header__social img{
+    display: block;
+    padding: 0px 8px;
+}
+
+.header__social__search{
+    display: block;
+    position: relative;
+    /* z-index: 1; */
+}
+.header__social__search_input {
+    /* background-color: #22a7ee; */
+    border: 0;
+    font-size: 18px;
+    /* padding: 15px; */
+    height: 22px;
+    width: 18px;
+    transition: width 0.3s ease;
+    /* position: relative; */
+    /* z-index: 900; */
+}
+.header__social__search_btn {
+    /* background-color: #22a7ee; */
+    color: #22a7ee;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 22px;
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+.header__social__search_btn:hover{
+    background-color: #22a7ee;
+    color: #fff;
+}
+.header__social__search_btn:focus,
+.header__social__search_input:focus {
+  outline: none;
+}
+.header__social__search.active .header__social__search_input {
+    /* position: relative; */
+    width: 80px;
+    /* z-index: 900; */
+}
+
+.header__social__search.active .header__social__search_btn {
+    transform: translateX(0px);
+}
+
+.header__social__search.active #social_active{
+    display: none !important;
+    /* z-index: -2; */
+}
+
+.nav_btns{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #6384BD;
+}
+.nav_btns_help{
+    list-style: none;
+    display: flex;
+}
+.nav_btns_help li{
+    padding: 2px 6px 2px 6px;
+    color: #6384BD;
+    font-size: 13px;
+    border-right: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.nav_btns_submenu {
+    display: none;
+    list-style: none;
+}
+.nav_btns_hover{
+    position: relative;
+}
+.nav_btns_hover:hover .nav_btns_submenu{
+    color: #3B5EE5;
+    padding: 10px;
+    background-color: #f5f5fe;
+    font-size: 13px;
+    display: block;
+    position: absolute;
+    width: 150px;
+    box-shadow: 2px 1px 6px #444;
+}
+.nav_btns_submenu li{
+    border-right: none;
+}
+.othergoals_date{
+    padding: 15px;
+}
+.othergoals_date button{
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+}
+.date_leftArrow, .date_rightArrow, .calender_symbol{
+    line-height: 900;
+    width: 17px;
+    height: 32px;
+    padding: 0;
+    background-size: 108%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_lt.svg);
+    background-color: transparent;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+}
+.date_rightArrow{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_arrow_rt.svg);
+    background-size: 100%;
+}
+.date_show{
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    margin: 0 1em;
+    max-width: 22em;
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.calender_symbol{
+    background-image: url(https://www.sparkpeople.com/assets/diet5/dte2_cal_icon.svg);
+    width: 32px;
+    background-size: 100%;
+    margin-right: 0.8em;
+}
+.line_break{
+    height: 5px;
+    background-color: #22a7ee;
+
+}
+.footer_center {
+    margin-top: 30px;
+    /* height: 300px; */
+    width: 1300;
+    /* background-color: rgb(233, 233, 233); */
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+.footer_line1 {
+    margin-left: 20%;
+    margin-bottom: 0px;
+}
+.footer_line2 {
+    margin-left: 17%;
+    margin-top: 0px;
+}
+.footer > p {
+    font-size: 12px;
+    line-height: 0cm;
+    color:rgb(71, 71, 71);
+}
+.footer > p:hover {
+    color: rgb(93, 130, 241);
+    text-decoration: underline;
+}
+.vertical_line {
+    height: 15px;
+    width: 1px;
+    background-color: rgb(90, 89, 89);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.footer_line3 {
+    margin-left: 30%;
+    margin-top: 10px;
+}
+.footer_line4,
+.footer_last_line {
+    font-size: 13px;
+    color:rgb(71, 71, 71);
+    text-align: center;
+}

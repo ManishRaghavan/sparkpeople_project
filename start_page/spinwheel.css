@@ -1,0 +1,116 @@
+text{
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:11px;
+    pointer-events:none;
+  }
+  #chart{
+    position:absolute;
+    width:500px;
+    height:500px;
+    top:0;
+    left:0;
+    margin-left: 0;
+  }
+  #question{
+    position: absolute;
+    width:400px;
+    height:500px;
+    top:0;
+    left:520px;
+  }
+  #question h1{
+    font-size: 100px;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    padding: 0px;
+    margin-left: 50px;
+    top:50%;
+    -webkit-transform:translate(0,-50%);
+            transform:translate(0,-50%);
+            color: rgb(136, 0, 0);
+  }
+  
+  
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: black;
+      float: right;
+      margin-right: 100px;
+      font-size: 58px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .footer_center {
+      margin-top: 30px;
+      /* height: 300px; */
+      width: 1300;
+      /* background-color: rgb(233, 233, 233); */
+  }
+  .footer {
+      display: flex;
+      flex-direction: row;
+  }
+  .footer_line1 {
+      margin-left: 20%;
+      margin-bottom: 0px;
+  }
+  .footer_line2 {
+      margin-left: 17%;
+      margin-top: 0px;
+  }
+  .footer > p {
+      font-size: 12px;
+      line-height: 0cm;
+      color:rgb(71, 71, 71);
+  }
+  .footer > p:hover {
+      color: rgb(93, 130, 241);
+      text-decoration: underline;
+  }
+  .vertical_line {
+      height: 15px;
+      width: 1px;
+      background-color: rgb(90, 89, 89);
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5px;
+  }
+  .footer_line3 {
+      margin-left: 30%;
+      margin-top: 10px;
+  }
+  .footer_line4,
+  .footer_last_line {
+      font-size: 13px;
+      color:rgb(71, 71, 71);
+      text-align: center;
+  }
